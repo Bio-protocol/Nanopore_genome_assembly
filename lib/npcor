@@ -1,6 +1,5 @@
 #!/bin/bash
 # by Sanzhen Liu
-# 3/2020
 
 version=0.01;
 #source activate base

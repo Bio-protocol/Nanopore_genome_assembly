@@ -2,7 +2,6 @@
 
 # File: split.fasta.pl
 # Author: Sanzhen Liu
-# Date: 6/23/2012 
 
 use strict;
 use warnings;

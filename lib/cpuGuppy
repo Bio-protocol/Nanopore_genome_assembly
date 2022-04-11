@@ -1,9 +1,5 @@
 #!/bin/bash -l
 # Sanzhen Liu
-# 1/4/2019
-# update 9/9/2019 to match v3.2.4
-# update 1/17/2020 for parallel runs; tested on guppy_cpu_version3.4.4
-# update flowcells and kits; disable_pings; remove find "-type f" to allow find symbolic links and regular fast5 file type; add f for configuration file, which will ignore flowcells and kits information;update mem-per-cpu to 2G;modified to 2 caller and 10 CPU-per-caller; add -a 4 to split command which increase the jobs number, but may be not resources to run. 02/02/2022
 version=v0.1.0
 
 # module to add note and time
