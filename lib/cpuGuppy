@@ -1,0 +1,336 @@
+#!/bin/bash -l
+# Sanzhen Liu
+# 1/4/2019
+# update 9/9/2019 to match v3.2.4
+# update 1/17/2020 for parallel runs; tested on guppy_cpu_version3.4.4
+# update flowcells and kits; disable_pings; remove find "-type f" to allow find symbolic links and regular fast5 file type; add f for configuration file, which will ignore flowcells and kits information;update mem-per-cpu to 2G;modified to 2 caller and 10 CPU-per-caller; add -a 4 to split command which increase the jobs number, but may be not resources to run. 02/02/2022
+version=v0.1.0
+
+# module to add note and time
+add_note() {
+	timeinfo=$(date +%Y-%m-%d"("%_H:%M")")
+	echo "o  "$timeinfo
+	echo "   "$1
+}
+
+# color setting
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
+# usage informaiton
+usage() {
+	echo -e "${RED}Usage${NC}: $0 -d <path_to_run> -o <path_to_output> [other options]" >&2
+	echo "  -s: path to guppy_basecaller (/homes/liu3zhen/software/guppy_gpu/ont-guppy/bin)" >&2
+	echo "  -d: path to Nanopore data directory; required" >&2
+	echo "      <example>: /bulk/liu3zhen/LiuRawData/nanopore/fast5/macJie/20180925_2336_A188WGS092518a" >&2
+	echo "  -o: path for outputs; required" >&2
+	echo "      <example>: /bulk/liu3zhen/LiuRawData/nanopore/fastq/macJie" >&2
+	echo "  -c: flowcell (FLO-MIN106)" >&2
+	echo "  -k: kit (SQK-LSK109)" >&2
+	echo "  -t: trim_strategy (dna)" >&2
+	echo "  -n: number of array jobs (20)" >&2
+	echo "  -u: number of cpus (16)" >&2
+	echo "  -m: running time for each array task (0-23:59:59)" >&2
+	echo "  -f: configuration model" >&2
+	echo "  -p: slurm partition" >&2
+	echo "  -h: usage information and quit" >&2	
+}
+
+# parameters
+while getopts ":s:d:o:c:k:f:t:u:m:p:n:h" opt; do
+	case $opt in
+		s) bspath=$OPTARG;;
+		d) datadir=$OPTARG;;
+		o) outdir=$OPTARG;;
+		c) flowcell=$OPTARG;;
+		k) kit=$OPTARG;;
+		t) trim=$OPTARG;;
+		n) nruns=$OPTARG;;
+		m) runtime=$OPTARG;;
+		u) ncpus=$OPTARG;;
+		f) conf=$OPTARG;;
+		p) partition=$OPTARG;;
+		h) usage; exit;;
+		\?) echo "Invalid options: -$OPTARG." >&2; exit;;
+		:) echo "Option -$OPTARG requires an argument" >&2; exit;;
+	esac
+done
+
+# check required parameters:
+if [ -z $datadir ] || [ -z $outdir ]; then
+	echo -e "${RED}ERROR:${NC}: Required parameters: -d; -o." >&2
+	usage >&2;
+	exit;
+fi
+
+# basecaller:
+if [ -z $bspath ]; then
+	bspath=lib/ont-guppy-cpu/bin
+fi
+sfw=`$bspath/guppy_basecaller --version`
+
+# other parameters
+#flowcell_db="FLO-FLG001 FLO-MIN106 FLO-MIN107 FLO-MIN110 FLO-PRO001 FLO-PRO002"
+flowcell_db="
+FLO-FLG001
+FLO-FLG111
+FLO-MIN106
+FLO-MIN107
+FLO-MIN110
+FLO-MIN111
+FLO-MIN112
+FLO-MINSP6
+FLO-PRO001
+FLO-PRO002
+FLO-PRO002-ECO
+FLO-PRO111
+FLO-PRO112
+"
+kit_db="
+OND-SQK-LP0096M
+OND-SQK-LP0096MA
+OND-SQK-LP0096S
+OND-SQK-LP0768L
+OND-SQK-LP1152S
+OND-SQK-LP9216
+OND-SQK-RP0096M
+OND-SQK-RP0096MA
+OND-SQK-RP0384L
+SQK-16S024
+SQK-CAS109
+SQK-CS9109
+SQK-DCS108
+SQK-DCS109
+SQK-LRK001
+SQK-LSK108
+SQK-LSK109
+SQK-LSK109-XL
+SQK-LSK110
+SQK-LSK110-XL
+SQK-LSK112
+SQK-LSK112-XL
+SQK-LSK308
+SQK-LSK309
+SQK-LSK319
+SQK-LWB001
+SQK-LWP001
+SQK-MLK110-96-XL
+SQK-MLK111-96-XL
+SQK-NBD110-24
+SQK-NBD110-96
+SQK-NBD112-24
+SQK-NBD112-96
+SQK-PBK004
+SQK-PCB109
+SQK-PCB110
+SQK-PCB111-24
+SQK-PCS108
+SQK-PCS109
+SQK-PCS110
+SQK-PCS111
+SQK-PRC109
+SQK-PSK004
+SQK-Q20EA
+SQK-RAB201
+SQK-RAB204
+SQK-RAD002
+SQK-RAD003
+SQK-RAD004
+SQK-RAD112
+SQK-RAS201
+SQK-RBK001
+SQK-RBK004
+SQK-RBK110-96
+SQK-RLB001
+SQK-RLI001
+SQK-RNA001
+SQK-RNA002
+SQK-RPB004
+SQK-ULK001
+VSK-PTC001
+VSK-VBK001
+VSK-VMK001
+VSK-VMK002
+VSK-VMK003
+VSK-VSK001
+VSK-VSK002
+VSK-VSK003
+"
+
+# check flowcell input
+flowcell_check=0;
+if [ -z $flowcell ]; then
+	flowcell=FLO-MIN106;
+	flowcell_check=1;
+else
+	for fc in $flowcell_db; do
+		if [ $flowcell == $fc ]; then
+			flowcell_check=1;
+		fi
+	done
+fi
+
+# trimming method
+if [ -z $trim ]; then
+	trim=dna
+fi
+
+# number of array jobs
+if [ -z $nruns ]; then
+	nruns=20
+fi
+
+# slurm setting
+if [ -z $runtime ]; then
+	runtime="0-23:59:59"
+fi
+
+if [ -z $ncpus ]; then
+	ncpus=16
+fi
+
+# no flowcell match, quit
+if [ $flowcell_check -eq 0 ]; then
+	echo -e "${RED}ERROR:${NC}:only the following flowcell ID can be used:" >&2;
+	for fc in $flowcell_db; do
+		echo $fc >&2;
+	done
+	exit;
+fi
+
+# check kit input
+kit_check=0;
+if [ -z $kit ]; then
+	kit=SQK-LSK109;
+	kit_check=1;
+else
+	for ekit in $kit_db; do
+		if [ $kit == $ekit ]; then
+			kit_check=1;
+		fi
+	done
+fi
+
+# no kit match, quit
+if [ $kit_check -eq 0 ]; then
+	echo -e "${RED}ERROR:${NC}:only the following kit ID can be used:" >&2;
+	for ekit in $kit_db; do
+		echo $ekit >&2;
+	done
+	exit;
+fi
+
+# base calling
+outname=$(echo $datadir | sed 's/.*\///g')
+echo $outname
+
+# input data
+if [ -d $datadir"/fast5" ]; then
+	fast5dir=$datadir"/fast5"
+else
+	echo -e "${RED}ERROR${NC}: No fast5 directory exist!"
+	exit 1;
+fi
+
+# outdir
+if [ ! -d $outdir ]; then
+	mkdir $outdir
+fi
+
+# tmp directory
+tmpdir=$outdir/$outname".tmp"
+if [ -d $tmpdir ]; then
+	rm $tmpdir -rf
+fi
+mkdir $tmpdir
+
+# output log and sbatch
+logfile=$tmpdir/$outname".log"
+sbatchfile=$tmpdir/$outname".sbatch"
+
+# information to log
+echo "Here are parameters used." >$logfile
+echo "============================" >>$logfile
+echo "basecaller:$sfw" >>$logfile
+echo "flowcell="$flowcell >>$logfile
+echo "kit="$kit >>$logfile
+echo "input_directory="$fast5dir >>$logfile
+echo "output_directory="$outdir >>$logfile
+
+# basecalling
+add_note "check if fast5 files exist" >> $logfile
+
+### extract all direcotories directly holding fast5 files.
+fast5hold_dir=`find "$fast5dir" -name '*.fast5' -printf '%h\n' | head -n 1`
+if [ -z ${fast5hold_dir} ]; then
+	echo -e "${RED}ERROR${NC}: No fast5 files found!" >>$logfile
+	exit 1;
+fi
+
+### check fast5 file redundancy
+add_note "check fast5 duplication" >> $logfile
+fast5listfile=$tmpdir/$outname".fast5list"
+find "$fast5dir" -name '*.fast5' > $fast5listfile ## -type f was deleted.
+dupfast5=`sed 's/.*\///g' $fast5listfile | awk 'seen[$0]++' | head -n 10`
+if [[ -z "$dupfast5" ]]; then
+	echo "   Good news! Pass file duplication check" >>$logfile
+else
+	echo -e "${RED}ERROR${NC}: Duplicated fast5 files found!" >>$logfile
+	echo "Here are example duplicated file names" >>$logfile
+	echo $dupfast5 | sed 's/ /\n/g' >>$logfile
+	exit 1;
+fi
+
+### split
+add_note "split fast5 list" >> $logfile
+nfiles=`wc -l $fast5listfile | sed 's/ .*//g'`
+declare -i nsplit
+nsplit=$nfiles/$nruns
+if [ $nsplit -lt 1 ]; then
+	nsplit=1
+fi
+split --numeric-suffixes=1 -l $nsplit -a 4 $fast5listfile $tmpdir/fast5split
+rename "split0" "split" $tmpdir/fast5split*
+rename "split0" "split" $tmpdir/fast5split*
+rename "split0" "split" $tmpdir/fast5split*
+rename "split0" "split" $tmpdir/fast5split*
+narrays=`ls -l $tmpdir/fast5split* | wc -l`
+
+### sbatch file:
+add_note "generate sbatch file" >> $logfile
+
+echo "#!/bin/bash -l" >$sbatchfile
+echo "#SBATCH --job-name="gp"$outname" >>$sbatchfile
+echo "#SBATCH --array=1-$narrays" >>$sbatchfile
+echo "#SBATCH --mem-per-cpu=2G" >>$sbatchfile
+echo "#SBATCH --time=$runtime" >>$sbatchfile
+echo "#SBATCH --cpus-per-task=$ncpus" >>$sbatchfile
+echo "#SBATCH --output=$tmpdir/%A_%a_%j.out" >> $sbatchfile
+if [ ! -z $partition ]; then
+	echo "#SBATCH --partition=$partition" >>$sbatchfile
+fi
+echo -e "time $bspath/guppy_basecaller --disable_pings --flowcell $flowcell --kit $kit --trim_strategy $trim \\" >> $sbatchfile
+echo -e "     --num_callers 2 --cpu_threads_per_caller 10 \\" >> $sbatchfile
+echo -e "     -q 0 --bam_out -s $outdir/$outname/\$SLURM_ARRAY_TASK_ID \\" >> $sbatchfile
+echo -e "     --input_file_list $tmpdir/fast5split\$SLURM_ARRAY_TASK_ID" >>$sbatchfile
+#--num_callers 3 --cpu_threads_per_caller 10
+#echo -e "     --cpu_threads_per_caller \$SLURM_CPUS_PER_TASK \\" >> $sbatchfile
+### run
+add_note "submit sbatch file" >> $logfile
+sbatch $sbatchfile
+
+### basecalling
+#-i [ --input_path ] arg           Path to input fast5 files.
+#-s [ --save_path ] arg            Path to save fastq files.
+#--flowcell arg                    Flowcell to find a configuration for
+#--kit arg                         Kit to find a configuration for 
+#--cpu_threads_per_caller arg      Number of CPU worker threads per basecaller.
+#--qscore_filtering                Enable filtering of reads into PASS/FAIL folders based on min qscore.
+#-r [ --recursive ]                Search for input files recursively.
+#--min_qscore arg                  Minimum acceptable qscore for a read to be filtered into the PASS folder
+#--trim_strategy arg               Trimming strategy to apply: 'dna' or 'rna' (or 'none' to disable trimming)
+#-q [ --records_per_fastq ] arg    Maximum number of records per fastq file, 0 means use a single file (per worker, per run id).
+
+#echo "basecalling finished @" >>$logfile
+#date >> $logfile
+

@@ -1,0 +1,817 @@
+2022-03-25 01:24:44.037534 [guppy/message] ONT Guppy basecalling software version 6.0.6+8a98bbc
+config file:        /bulk/guifanglin/1-projects/6-nano-asm/bio-protocol2/wheat_blast_genome_assembly/lib/ont-guppy-cpu/data/dna_r9.4.1_450bps_hac.cfg
+model file:         /bulk/guifanglin/1-projects/6-nano-asm/bio-protocol2/wheat_blast_genome_assembly/lib/ont-guppy-cpu/data/template_r9.4.1_450bps_hac.jsn
+input path:         input/ont_fast5/fast5
+save path:          cache/1o-basecall
+chunk size:         2000
+chunks per runner:  256
+minimum qscore:     9
+records per file:   4000
+num basecallers:    4
+cpu mode:           ON
+threads per caller: 4
+2022-03-25 01:24:44.039302 [guppy/info] crashpad_handler not supported on this platform.
+2022-03-25 01:24:45.542157 [guppy/message] Found 3 fast5 files to process.
+2022-03-25 01:24:45.543854 [guppy/message] Init time: 1499 ms
+2022-03-25 01:24:50.350585 [guppy/info] Read '017966a9-29a3-47aa-aebe-9bdea2becf9e' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:50.393547 [guppy/info] Read '026b6bf4-4ba7-4df3-983d-290fcb1090f2' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:50.466880 [guppy/info] Read '0794bce1-3937-4372-8f50-ccd1af8a296e' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:50.531610 [guppy/info] Read '08e1b3db-4655-41cf-ac82-6237b437bf51' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:50.615022 [guppy/info] Read '0d240301-b309-40ff-bc6b-1e413d45a771' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:50.646575 [guppy/info] Read '0f86cd7f-9bbb-4b64-a802-95165d69b3a8' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:50.658279 [guppy/info] Read '133abf72-fb73-4528-a69a-3edba9c0a6fa' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:50.756242 [guppy/info] Read '1543e847-c125-4a04-b880-287b6b85ae5e' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:50.795249 [guppy/info] Read '19ff1eff-0104-45b3-afa2-bd455bdbcac2' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:50.942245 [guppy/info] Read '1e615687-2300-418e-a140-a403cb616032' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.032252 [guppy/info] Read '1ea10498-ab9e-4b1d-907b-214ff5d85112' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.032363 [guppy/info] Read '20f5b5fa-f8fa-49d7-9d86-3a6ddee1932c' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.153249 [guppy/info] Read '24da2c11-ea79-4eb4-bea2-2409659b20f5' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.153361 [guppy/info] Read '2839c007-c67b-4f15-91b6-53065890fcf8' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.175567 [guppy/info] Read '29048f25-132d-482e-91c9-308adc564e12' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.245507 [guppy/info] Read '29b4e49a-05dc-4f4c-b549-7435832aec86' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.251287 [guppy/info] Read '2be4d1f2-3703-4bf7-baba-2d0eb8ea0551' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.310224 [guppy/info] Read '2c27e1ff-b249-4a9b-900b-f772a3a25f31' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.324366 [guppy/info] Read '336eb6c1-cb3a-48f1-ada3-9c757151bdcd' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.357243 [guppy/info] Read '36eefe31-9d61-41dd-a5f7-103658b9675c' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.393227 [guppy/info] Read '38562591-1c4f-44fd-acb8-f5b6800fafcb' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.426430 [guppy/info] Read '39bf0f8e-b76d-44fd-b3e0-904679f4c734' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.464217 [guppy/info] Read '3c06d500-67d3-4c4e-925c-04b8fff342dd' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.509227 [guppy/info] Read '3dc337ce-2c90-45d2-a47f-24d59e508206' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.511844 [guppy/info] Read '3f7e6860-79aa-47cd-80aa-f5850674e103' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.555224 [guppy/info] Read '41cd0a87-0906-4c43-8c5f-9a0e60947566' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.568239 [guppy/info] Read '44ecb384-3a51-4569-b33a-6d35d4e90ee4' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.568331 [guppy/info] Read '453ed5e6-27db-46f6-8399-5bc51a1207b2' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.581231 [guppy/info] Read '46aaad2c-accb-4f37-8c27-8610539b754c' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.618215 [guppy/info] Read '47a52087-fd4d-409d-ba7c-1fd59896e758' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.629245 [guppy/info] Read '48733a99-7a37-4b29-a1a8-0538b918202d' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.651257 [guppy/info] Read '4a504d8a-e869-433f-8553-ac800291349a' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.662215 [guppy/info] Read '4efbe2a5-67fa-4732-808d-1521079d3b57' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.673211 [guppy/info] Read '506e4136-0500-405c-ac6e-2ff43994500d' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.684204 [guppy/info] Read '510b12e3-69b3-4219-bbb4-730404f886ce' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.717211 [guppy/info] Read '5ac1edb2-dec8-4df3-8703-0cad3dba6d6b' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.771203 [guppy/info] Read '5c4562a3-bca9-491c-bf72-e51ec0cbdd45' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.771288 [guppy/info] Read '5f8931e4-ade7-4164-8ce4-6afcb9aa27a9' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.771318 [guppy/info] Read '5fde3897-9541-4a24-bd43-01cd3e8a6811' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.782371 [guppy/info] Read '5fdfc3c3-bf4a-405b-bf61-759652ffbbd9' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.884205 [guppy/info] Read '61e247ff-6a2d-40a1-bbd9-629d622fdf7f' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.895334 [guppy/info] Read '663a26f6-0063-44a4-8f6d-93ed97b60509' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.928187 [guppy/info] Read '6778ff9c-3397-46ee-9781-c08a0f911873' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.975186 [guppy/info] Read '68a27e58-326d-40df-9596-77945763ca71' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.999207 [guppy/info] Read '6e6c75bb-c21b-48f6-a428-1e17edbb820d' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:51.999306 [guppy/info] Read '6e816c4e-a44b-4a29-b647-12fdfeb8b96b' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.021207 [guppy/info] Read '6f1888bc-a7f2-4c0c-b969-f28ad94f6332' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.021288 [guppy/info] Read '6f8a6d19-4b79-41c3-9400-9ad787fe4510' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.032192 [guppy/info] Read '78488af0-37e0-432c-9008-4eda8f431297' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.043283 [guppy/info] Read '786b5033-a069-47cc-9969-2cfb8743a089' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.054306 [guppy/info] Read '79c429f2-7921-4f3b-aaff-6e370d32489d' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.054360 [guppy/info] Read '79e155fc-32aa-44bf-a13d-c55e3c8e6c50' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.065255 [guppy/info] Read '7dbf1a92-b14f-467f-b7a3-00518c22349c' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.120196 [guppy/info] Read '7dc0334d-b687-43fe-bcfd-64cc2521bed6' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.120281 [guppy/info] Read '7e6568db-68e2-4545-910b-1c49ad8d08c6' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.134204 [guppy/info] Read '7eb19bf0-7d53-41c5-938f-da17bc052674' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.158226 [guppy/info] Read '7ed6d64d-075a-44bc-86eb-3ec513b12b93' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.191213 [guppy/info] Read '7ef37154-47f9-4377-9b65-e2faced5a82a' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.191281 [guppy/info] Read '80061805-7224-47af-8939-0f9fcee24053' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.224214 [guppy/info] Read '82d6f3a6-8151-4394-937f-cdcebde33e67' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.264207 [guppy/info] Read '8c86d344-50ae-4731-acbb-6ba9ae6e94a0' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.264276 [guppy/info] Read '8cc4f163-d76e-464a-aacb-9d6603e55b89' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.297211 [guppy/info] Read '8d6e7315-bbee-4144-b292-2fd11d2a1058' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.308745 [guppy/info] Read '8ddb01cc-0575-4873-b693-3f1cc689faf8' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.308821 [guppy/info] Read '8fd9733f-2d0e-489b-a08c-91cd3f25136b' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.324256 [guppy/info] Read '906feebf-ab36-47ad-a0ae-c0bc89e7b525' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.324335 [guppy/info] Read '92e72b28-d679-4d6e-b7c4-db045ce36082' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.346207 [guppy/info] Read '94d0dc51-89c0-485a-a7bd-f582a9e42366' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.352223 [guppy/info] Read '953a7f8a-b58a-4ca2-97aa-79f9df5252a2' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.401186 [guppy/info] Read '9e5329ca-bcce-438c-9d5b-70248913a209' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.432191 [guppy/info] Read '9f287d5c-18bf-45d1-8ecb-16e048f8c5e0' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.440202 [guppy/info] Read 'a0703d2b-ca90-4d4b-a0b2-0dd988d4621f' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.480193 [guppy/info] Read 'a3c8392c-1582-4777-b50d-0239b15bb94c' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.485192 [guppy/info] Read 'a5d4162b-801b-4f50-bb81-e0caf6c72941' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.489201 [guppy/info] Read 'a5faaccf-f9b7-4706-b1bf-b91da7be64cb' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.558161 [guppy/info] Read 'aa5e19c7-7936-4582-beda-ef72347b83d9' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.579184 [guppy/info] Read 'abb9dc45-08c6-4192-bbda-7bb1dc2a49f4' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.579250 [guppy/info] Read 'ae872141-d728-43c7-8f65-625ac1f563f9' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.613262 [guppy/info] Read 'b17eb435-e8d0-46bb-8567-809b9f03e551' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.633196 [guppy/info] Read 'b485661a-0485-4179-9ad1-823ee1726b7f' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.670189 [guppy/info] Read 'b7013229-23a1-408c-a7c8-b9a411be9cad' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.680279 [guppy/info] Read 'b7483a15-7c35-4dd1-97b4-bb30609f76c7' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.726276 [guppy/info] Read 'b76ab46c-96c9-4703-9c3f-be3223db0963' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.766135 [guppy/info] Read 'ba27116c-4207-40ab-814b-1d3b7d058123' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.768846 [guppy/info] Read 'bcd64874-14e2-4833-b502-de0a2f933313' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.771721 [guppy/info] Read 'bd5a7c8a-c71b-4dee-93f8-65a07a1a5968' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.800718 [guppy/info] Read 'bffaff5e-bc60-419e-ae4f-1eadfd9b3c5a' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.824455 [guppy/info] Read 'c399bcad-3b5d-4c29-a342-44f740d2f222' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.831065 [guppy/info] Read 'c53c0247-ccba-4d88-90d5-a901918512a6' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.866155 [guppy/info] Read 'c6b28e5b-db66-4333-abf2-d16687e3ebaf' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.866228 [guppy/info] Read 'c6c3c9e0-8b03-4f11-9ac7-95a0e765c1f8' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.878846 [guppy/info] Read 'c89f8efc-0809-4a12-8426-678e299c000f' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.920532 [guppy/info] Read 'c94ddaff-ee44-4af7-97fe-83097132106a' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.922480 [guppy/info] Read 'ca4915d7-394b-4495-8237-d30d6c564f3f' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.951467 [guppy/info] Read 'cabbb700-37a5-43c2-a1a2-a5db0af014bf' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:52.981726 [guppy/info] Read 'cad921b8-02fe-4076-963c-6aa28fe4f46f' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.015271 [guppy/info] Read 'cbf3ea1a-7369-42d8-be98-b51f07bcee5a' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.018136 [guppy/info] Read 'ceb17801-9898-435f-8cfb-81802e5a9d73' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.018185 [guppy/info] Read 'd0835f42-d539-403a-8ced-cc076e0330d3' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.090262 [guppy/info] Read 'd10fd348-96f9-4edb-b67d-65921314b8d5' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.095721 [guppy/info] Read 'd35a495d-2704-4149-b307-2ff1fea6bf33' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.112159 [guppy/info] Read 'd638d77a-33a5-4f91-8412-7c8a0f9a88c3' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.121205 [guppy/info] Read 'd905f4e4-1ba6-4ba4-a296-cb5ee6b2b98d' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.126302 [guppy/info] Read 'd9a58770-d081-4147-b9b5-20e06c1dac0b' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.169189 [guppy/info] Read 'dba4caf3-06c6-4b1e-bd0d-3cdf1b31b1c2' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.198186 [guppy/info] Read 'dbb4df27-f149-4d24-919d-c0bc287c23d0' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.198257 [guppy/info] Read 'e00b58f6-6ba2-43f3-b0cf-e1947ebcf534' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.198280 [guppy/info] Read 'e04522d4-2de0-4676-8935-3439bafd5d34' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.198299 [guppy/info] Read 'e20b4b3e-5662-4cb7-a45f-c4e6348656b7' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.213189 [guppy/info] Read 'e25220e7-7863-4b96-ac35-c10839a74501' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.235198 [guppy/info] Read 'e396707c-44a9-4e54-923b-8ff1f832d473' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.235280 [guppy/info] Read 'e446fb9e-182c-460f-927f-b5124a59e492' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.257197 [guppy/info] Read 'e4a4848d-068a-4044-8971-1f96c17991d5' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.279196 [guppy/info] Read 'e5c13739-ca58-4e60-b5f1-5be66a567dfa' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.301200 [guppy/info] Read 'e5f97851-23a4-4a90-9fbc-97f7fe26be7d' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.323170 [guppy/info] Read 'e68569f6-06f7-4c26-8703-4725cf4d8974' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.323236 [guppy/info] Read 'e6fcae70-a8d7-4e79-b02d-a3c7696f63a5' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.323258 [guppy/info] Read 'e8921d47-8163-4aba-a205-03cb409e69ae' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.323276 [guppy/info] Read 'e9ace0dd-20a6-4c95-9b7d-8877980347bc' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.323301 [guppy/info] Read 'eb141b22-39fc-4439-9665-ac958b7c0f8b' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.354190 [guppy/info] Read 'ed83f816-d076-4d6b-93eb-ec1d86d1e666' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.354263 [guppy/info] Read 'f474f529-e2ac-43b4-850d-b004dde23243' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.377216 [guppy/info] Read 'f4e48251-e55e-416c-a5d4-995538a013d6' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.401228 [guppy/info] Read 'f59a2b09-89d3-41fb-9416-ae52f65d353a' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.401295 [guppy/info] Read 'f66616ef-9a93-4c0d-a90a-9104ca6be548' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.428290 [guppy/info] Read 'fb1fdc96-aafa-4aa4-a5da-c7a199e49dd0' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.441234 [guppy/info] Read 'fb36c6fa-864e-4420-915b-7a0bd1400d75' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.441299 [guppy/info] Read 'fc7aa131-f9ae-491d-8a31-f692622751a5' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.463234 [guppy/info] Read 'fcc79fe3-19cb-4330-9c81-a688993a3574' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:53.514371 [guppy/info] Read 'fed065d3-0f52-46fa-a759-580661df2435' from file "B71example0.fast5" has been loaded.
+2022-03-25 01:24:58.817189 [guppy/info] Read '000cca4b-72fa-47cb-812d-740d5b171fff' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:24:58.861177 [guppy/info] Read '001d7213-ea22-432b-86ea-ef7f1585e237' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:24:58.926180 [guppy/info] Read '003d0256-e20c-4c17-bf63-9ffb399d2c64' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:24:58.926272 [guppy/info] Read '00482b2d-f18f-4b75-a05b-d7fcf34e0326' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:24:58.981175 [guppy/info] Read '038007c7-84f2-4d68-8386-47fbf46f04cb' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:24:59.036174 [guppy/info] Read '040afcb6-5309-4a7c-a2b8-3759be2c5ebb' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:24:59.091172 [guppy/info] Read '04605447-16ed-4602-a5e5-1da9023fa95a' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:24:59.113173 [guppy/info] Read '050acfba-89b8-49bf-a97c-63874291d044' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:24:59.256173 [guppy/info] Read '08817bfc-edbb-4dda-bede-d6641192b84e' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:24:59.289178 [guppy/info] Read '092b60f1-f9db-45e3-b21b-a3d17755840b' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:24:59.377180 [guppy/info] Read '11040ba2-d5ef-4562-be26-9f79253e5455' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:24:59.534179 [guppy/info] Read '1223257f-fbac-4a93-8359-51bb8c19e040' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:24:59.732170 [guppy/info] Read '129263ba-2c6d-4a73-9c27-d20e1661500b' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:24:59.754172 [guppy/info] Read '12e8c5f9-4eb5-4562-a76f-e884633d28cd' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:24:59.765164 [guppy/info] Read '130b402f-2f4b-4b58-954b-a2857775949e' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:24:59.809168 [guppy/info] Read '172e7b0e-4b95-4e19-9ee4-da2019d47645' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:24:59.824193 [guppy/info] Read '186c26b1-a0d7-4c9a-a293-46c6d5886ea9' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:24:59.832877 [guppy/info] Read '19261fb4-7bab-498d-89b8-f5381a3cdaa2' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:24:59.866221 [guppy/info] Read '1a349a82-0e5d-4e49-b46f-dff201bfbc4b' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:24:59.885640 [guppy/info] Read '1aaba9bd-c7ab-4d16-8e98-47dcc695be4a' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:24:59.950633 [guppy/info] Read '1d7922b5-290a-477e-84d8-50fd14ade459' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.029325 [guppy/info] Read '1da57989-ec90-48d2-9fe6-1a3842daa8c4' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.042175 [guppy/info] Read '1ea91af5-3f29-4821-a39b-a906ba849419' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.042262 [guppy/info] Read '1f2ed4f0-2c0b-4352-956f-cef476abb8a7' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.046644 [guppy/info] Read '21f689a0-40c7-4964-8a94-d62f76b54797' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.070193 [guppy/info] Read '2690031d-9d9a-4913-812b-33290a3c3e36' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.074601 [guppy/info] Read '31814433-7f70-4d55-9495-e12e02126485' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.074724 [guppy/info] Read '33c82af6-160c-4514-b941-20ec8b8d589b' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.120173 [guppy/info] Read '34094bc7-00f8-4be7-8e0b-df09e96d50b8' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.136492 [guppy/info] Read '3464c0ed-9df7-4b9d-adc9-e3662f85e10c' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.185222 [guppy/info] Read '36bcd48e-33bb-461c-ad4f-d453e17aebff' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.185333 [guppy/info] Read '391d7930-7472-4d7f-aa98-9cd09d5ca773' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.229231 [guppy/info] Read '3b9372a6-0afe-4fe8-b071-a2f1f75d3481' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.229316 [guppy/info] Read '3bfc3787-2fa3-48cf-b6e8-b97e085c4578' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.229360 [guppy/info] Read '3c4ba64d-be37-4fd6-afee-f29b94ea6826' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.273228 [guppy/info] Read '3dac8428-d51d-4c70-9e6b-d86ae3c6dffe' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.273310 [guppy/info] Read '4129a64a-b389-473c-8361-153e32cef8e1' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.317224 [guppy/info] Read '45865df3-bdb0-4cf6-a8f8-fa6124c266c4' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.328241 [guppy/info] Read '46357d6e-57b5-44a3-a6ff-9d14950a979b' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.394234 [guppy/info] Read '47a8eada-7e60-4cdf-b1cf-9e44c2226694' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.460225 [guppy/info] Read '4a7417d4-c1bf-4ed6-820e-57d74680f6d6' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.460325 [guppy/info] Read '4ce45ca9-83f6-4a81-8e61-4fbdded00731' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.482239 [guppy/info] Read '4deac4c9-e03f-4141-bd14-4328c632d62b' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.584234 [guppy/info] Read '4f5685d0-06f4-4e98-8e53-0bc6889945f7' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.595227 [guppy/info] Read '506f8e0f-4269-43b4-8383-8797a95f8fcb' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.773224 [guppy/info] Read '529805ec-4cb5-4882-91c4-c350647a5088' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.773301 [guppy/info] Read '5389958d-d26b-488b-ac88-9c99454aa443' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.784216 [guppy/info] Read '5557e7e8-745a-4d2e-b1aa-6607388239dd' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.795231 [guppy/info] Read '5809074d-053b-4044-906a-d8ddc0b53b19' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.806226 [guppy/info] Read '5930246a-a072-4492-a996-565af17f53c9' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.849249 [guppy/info] Read '5c399d16-96ee-435e-868c-db276ce26515' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.860219 [guppy/info] Read '5f9b1fe5-fc88-4936-88c0-45c9cbef6f10' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.893229 [guppy/info] Read '6226062c-319b-4eee-94eb-2a9d323b406c' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.904235 [guppy/info] Read '65d6f04c-6c21-4eeb-9453-f4ffc06a9416' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.904315 [guppy/info] Read '704b90f2-c8ef-4825-b3ae-ec1eb6e46536' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.926237 [guppy/info] Read '7224c2e5-5724-47cd-85c8-5ed411f41824' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.948230 [guppy/info] Read '755138b2-6d64-4323-9bd2-eeaa21b18856' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:00.981239 [guppy/info] Read '7894e557-3a92-435e-be40-62484bafa12e' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.003241 [guppy/info] Read '79968e00-fd2b-4cf7-afdc-eb9e04b67bc3' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.025219 [guppy/info] Read '7a59f859-6147-4501-9b23-e163aa2f7194' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.036231 [guppy/info] Read '7efb76cc-6c9d-4690-b2d1-9242f5124304' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.036325 [guppy/info] Read '7f6f5fc9-c45d-4117-a11e-5e435f166520' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.036351 [guppy/info] Read '800a28e5-a932-4d9c-be04-1af9e7fa8895' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.069230 [guppy/info] Read '864fd6cd-b522-4453-811c-4aa857dac1b7' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.093231 [guppy/info] Read '86707e46-e629-4f97-8d16-626ad0dfe352' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.115248 [guppy/info] Read '89a81018-50dc-4763-9253-438c8ded4e80' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.137226 [guppy/info] Read '8dccdbe0-a9fa-4019-9299-8eaffaaed970' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.170218 [guppy/info] Read '8fec2825-191a-4a83-b955-9a5563c4d128' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.170294 [guppy/info] Read '90f85b2b-c824-4fb5-a0fe-396b484f69bf' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.181212 [guppy/info] Read '916dc0ce-0b11-4a02-aabf-e5515baaa187' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.214231 [guppy/info] Read '93250208-7de3-4bbe-893e-c6744b675c86' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.236217 [guppy/info] Read '96b86db1-ea57-4e66-9660-de57c3f0774a' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.269221 [guppy/info] Read '96df29e4-bad0-4657-8b98-3a2e71895dc6' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.269299 [guppy/info] Read '96e44b56-7f5d-4d9c-9b5e-83bf4e54ebf2' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.269324 [guppy/info] Read '9ab32b55-fdee-46f4-b530-fe944a7e8e92' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.291208 [guppy/info] Read '9db7c56b-eebf-434a-a0e9-c680c6afff65' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.302389 [guppy/info] Read '9e1b0151-9723-4f06-a369-cf8a4441e3b1' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.302503 [guppy/info] Read '9ebb6d24-6b8e-4832-bb1d-7ffcc940276d' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.302536 [guppy/info] Read '9f1ed561-34b8-4fe1-bc67-13b6f7b8b82c' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.335217 [guppy/info] Read 'a06dcd9f-7def-4878-8b83-d630d9c773b2' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.335295 [guppy/info] Read 'a92d0882-bc1c-4f2e-aab5-6caa6bab9678' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.357217 [guppy/info] Read 'aa6b92c0-d416-4207-9bd4-08ef75d12cab' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.379228 [guppy/info] Read 'aab5da3a-70f2-4e19-97ad-abd709f99cde' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.401265 [guppy/info] Read 'ac487358-7205-4d8d-bad7-051be57669da' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.401390 [guppy/info] Read 'ac8af055-d9d7-4c23-8c24-88b3b3f457fc' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.421487 [guppy/info] Read 'adb39cb5-28d5-4d0a-88ac-c14bf5861dad' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.444230 [guppy/info] Read 'ae5737c2-5587-4154-bdf1-fc721f1066ea' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.444308 [guppy/info] Read 'b099e350-1cbd-467f-aaf9-167999988374' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.454245 [guppy/info] Read 'b18cf66d-8452-4532-ad21-136f6895cd30' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.485288 [guppy/info] Read 'b2a76ccb-b129-4ee4-8d86-31f683d2cd78' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.520226 [guppy/info] Read 'b3d317a5-10a5-4990-81fa-12f2c48b729e' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.531226 [guppy/info] Read 'b57634b2-058e-4fe6-856b-e7204d014080' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.531297 [guppy/info] Read 'b59d1b5f-c793-4b15-8d6f-d9cfb80b7e86' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.543458 [guppy/info] Read 'b8690546-9337-45c4-8df0-68b0dc989916' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.566243 [guppy/info] Read 'bb1d522e-86b9-4121-bfe9-47373a7373dd' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.575223 [guppy/info] Read 'bca3ab54-7ea8-45f9-ae55-796a37dc4f4d' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.598310 [guppy/info] Read 'bf2e9fed-3fda-47f2-a2ae-d2b0a8090e17' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.615364 [guppy/info] Read 'c266b5e4-f173-437f-a3cf-b243e66649d4' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.623373 [guppy/info] Read 'c3e8a947-3b76-4a4b-8b39-b9c9d01fdf06' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.623448 [guppy/info] Read 'c810d9ed-2683-475c-9eed-e778d5548c12' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.634225 [guppy/info] Read 'c8d70b81-2770-40c4-8e5a-24e49dcd786a' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.656247 [guppy/info] Read 'c9822071-5474-4f34-b26e-82784b5c0ce3' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.680358 [guppy/info] Read 'cb4311e8-67ee-46f0-bd8a-55413ea1686d' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.683243 [guppy/info] Read 'cb4a18a3-4360-499b-80a3-fe55f7f83a28' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.687307 [guppy/info] Read 'cc3b7cb7-5033-46ba-83e8-c1493dab60d3' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.707396 [guppy/info] Read 'cc9af57c-619d-4549-9045-3522f04d185a' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.733308 [guppy/info] Read 'cd40808e-9554-415e-b151-9689d05974fd' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.733385 [guppy/info] Read 'cd6392d4-3d12-47eb-a024-c23b4bb19a67' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.746300 [guppy/info] Read 'cf03a3d3-e35a-4a3c-b678-d59b860c2ea2' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.755299 [guppy/info] Read 'cf9dd997-3dd0-4928-a3fa-a3c7b676df39' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.755368 [guppy/info] Read 'd21bf541-023e-48af-9db6-1c8364b544f2' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.783306 [guppy/info] Read 'd339976d-1dd4-4025-b696-bdfa316fc1d9' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.813219 [guppy/info] Read 'd3480cc7-f974-4df2-8721-b018ecf5d0c1' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.824215 [guppy/info] Read 'd3c23a11-4826-48fe-a5fc-2a309811573d' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.837262 [guppy/info] Read 'd6dc45e8-e319-4948-ab34-b23dd28cc929' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.849242 [guppy/info] Read 'd705733f-39ca-4efe-89b6-c554c29429c8' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.867911 [guppy/info] Read 'd9a67da9-f92d-4f3e-8f1b-59b73f194d0d' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.893270 [guppy/info] Read 'd9b88d73-6a72-4a23-90a5-7d07f22f1b70' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.906186 [guppy/info] Read 'db4f9cf4-9e7c-4b8f-a362-795e94fced45' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.906294 [guppy/info] Read 'dd75f57d-dee7-4d45-af29-a5b1d5af8fcf' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.943596 [guppy/info] Read 'e0c2fbea-c1ea-40bd-9be8-f53bfc91cde5' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.955187 [guppy/info] Read 'e338c7c4-908d-40dd-9750-4435a9a1bb0b' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.970169 [guppy/info] Read 'e5baf8d2-7c5d-45ed-90bc-e1e4d1aaf9e6' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:01.989328 [guppy/info] Read 'e711fc17-cc4a-4375-a97c-475b45277339' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:02.002193 [guppy/info] Read 'e7a1deda-d87b-4f1a-a6af-87cdf0744bec' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:02.019180 [guppy/info] Read 'ea04ee4e-9283-4d6b-9500-580518017b14' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:02.066189 [guppy/info] Read 'ec7494b8-aa70-4ac6-b3e5-a658a38165e9' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:02.083167 [guppy/info] Read 'ecf4b4c3-ca3f-4380-9b8c-6a55f5028783' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:02.136174 [guppy/info] Read 'eea48d4c-4391-4c89-9f8d-0a94a2885447' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:02.157176 [guppy/info] Read 'ef1d9379-9f1b-46c6-bcc3-6903fade8926' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:02.187172 [guppy/info] Read 'f0d722d5-a8db-42e3-8b26-dde3ff56702f' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:02.205169 [guppy/info] Read 'f28c7b98-1552-4fef-9d69-3924c35d712a' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:02.234162 [guppy/info] Read 'f3cdbaca-cd0e-4ba0-9932-31411c863b9e' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:02.250829 [guppy/info] Read 'f71d60c5-1b30-400e-9a32-3da812f545b9' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:02.263194 [guppy/info] Read 'f851233a-6569-4de9-bcdb-4bfcb2597a67' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:02.275205 [guppy/info] Read 'f9f3220e-014a-4d79-83da-7720ac7bc3c7' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:02.275279 [guppy/info] Read 'fa6579f0-37b4-486c-9678-a39b62032e85' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:02.286205 [guppy/info] Read 'fcd81555-6297-4e39-873c-a1a325712e3f' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:02.319214 [guppy/info] Read 'fd3c1f47-3421-44eb-9180-7f3ba5a5ce6d' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:02.346285 [guppy/info] Read 'fd517bd9-a11c-4f35-bbac-f746978a13ed' from file "B71example1.fast5" has been loaded.
+2022-03-25 01:25:03.297532 [guppy/info] Read '017966a9-29a3-47aa-aebe-9bdea2becf9e' from file "B71example0.fast5" completed.
+2022-03-25 01:25:06.881487 [guppy/info] Read '0075b317-c096-4e58-af7d-b8250b91908a' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:06.962179 [guppy/info] Read '028762f9-73b9-4322-bb6c-ddf296a71d5c' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:06.997182 [guppy/info] Read '04361a21-4324-471f-bc52-781e12c1902b' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:07.084185 [guppy/info] Read '050467c9-0254-4aef-b0f5-2f808a78d7e0' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:07.135199 [guppy/info] Read '07bce571-0b74-4b64-9c66-52c759e3f327' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:07.184191 [guppy/info] Read '07e644c0-7b98-4d0b-8055-e5fa6a18ed56' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:07.296191 [guppy/info] Read '08c1b1a4-dee7-4582-8644-12d021ff3d9f' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:07.379204 [guppy/info] Read '0a1c1324-9204-40f5-87f5-0449d762290b' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:07.379287 [guppy/info] Read '0bd4826f-92af-4e9d-bdb9-b627a7e2ccab' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:07.558183 [guppy/info] Read '0e08926b-b3df-4bfc-9071-57c6bbf0a629' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:07.594186 [guppy/info] Read '0ea3deec-8209-4f16-87aa-24dc70492a52' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:07.727080 [guppy/info] Read '0f529c15-d578-4e45-8c41-c3aa52aba9c6' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:07.778534 [guppy/info] Read '12abf9ef-080c-4af7-a935-e8e847781fc1' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:07.828449 [guppy/info] Read '1329234d-3df5-4195-9ef7-9bc8e28dede6' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:07.877594 [guppy/info] Read '14ea6b00-1c1c-4082-8bbf-65a435036a5d' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.000638 [guppy/info] Read '1a551e76-fbad-4549-8682-cf0c9f48b7d6' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.163174 [guppy/info] Read '1b35e5c1-e95a-43dc-a6e8-e0866173ed1b' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.167240 [guppy/info] Read '2116c10c-83f8-47ef-99a0-8276b329fff1' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.170502 [guppy/info] Read '219ad381-e667-437b-90ac-d69893a18e10' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.193264 [guppy/info] Read '21fc48de-928a-4c00-945f-0bc699d493a6' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.195496 [guppy/info] Read '228bfed7-2083-4876-8820-cd5c58fa9015' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.264685 [guppy/info] Read '23bbff32-6170-4845-b2e6-48531be20cc9' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.277728 [guppy/info] Read '289722c1-520e-40a5-b723-f9b2e3d78baf' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.281652 [guppy/info] Read '2d1ed120-481c-4301-aaaa-01b1aec2ed00' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.336957 [guppy/info] Read '2e795125-ce6e-4f36-a599-0d88f4e10aff' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.345012 [guppy/info] Read '30c426c9-2d06-4d1b-8697-c676c3dda746' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.376241 [guppy/info] Read '34b6b66b-a733-45ca-a72c-a40ea5ad7970' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.383688 [guppy/info] Read '386f4611-c5dd-42a8-81db-6a604fd89578' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.409227 [guppy/info] Read '3abb8ff9-3025-453d-a7c4-3da9e85f4ce5' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.411266 [guppy/info] Read '3cbd0915-e157-4e47-9682-6180b7c5fae3' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.423218 [guppy/info] Read '3d08f548-dd1e-414b-8e93-d3e985a000e2' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.442221 [guppy/info] Read '3d109b34-958c-4c1a-83bc-20c40a1c9110' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.449294 [guppy/info] Read '3dc84b40-cbd7-467b-bceb-41a6c3571d88' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.474230 [guppy/info] Read '3fb3dfc7-0fc6-4b1a-af42-fe61bd0f7997' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.479043 [guppy/info] Read '3ff89fb1-66d2-43f7-a7ec-c70a37c3bc90' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.479138 [guppy/info] Read '41a21b60-c6b8-4bb5-8b69-c42b3330c96c' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.495238 [guppy/info] Read '477caf16-491d-4064-bcc3-22721cfb7fc9' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.500408 [guppy/info] Read '48158a29-a10d-4de1-b83d-564f7612861f' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.516209 [guppy/info] Read '4af0722b-ef9b-4ec5-aba8-f16898c0a479' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.543218 [guppy/info] Read '4c201993-65e7-4326-b691-3bb7f5d7d33b' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.548439 [guppy/info] Read '4eb3a571-d9bc-4d7a-8f61-5dc2d211e3ce' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.577226 [guppy/info] Read '55e45dd1-0514-4616-8619-3b8afdcf0beb' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.607229 [guppy/info] Read '57d3c56f-726c-4c5f-a02c-f083d682bcc5' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.611209 [guppy/info] Read '5ccef310-98bb-4aa2-9687-828293a2bab9' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.662194 [guppy/info] Read '5f92ffed-db63-40e9-8791-fa7ef7631a3f' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.666303 [guppy/info] Read '619d5750-b672-4269-8995-f6af2579d6e5' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.669286 [guppy/info] Read '621c143f-5b1a-4a8d-920f-b812ba5e153e' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.708213 [guppy/info] Read '62ce28bd-ed03-4d15-864a-60be7423538f' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.760218 [guppy/info] Read '66cb92a2-83bf-474f-b960-615d56a49e16' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.815237 [guppy/info] Read '6830731c-d263-4a5e-a1ad-ae07ef0ea440' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.815318 [guppy/info] Read '688ef985-46de-4625-8e3b-5d3ce42681bc' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.834200 [guppy/info] Read '68ae5564-02d5-4fba-9250-8aedbaddcf9b' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.845206 [guppy/info] Read '7136bf9b-d021-4e75-922e-fb51b87e668d' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.845255 [guppy/info] Read '746e1d22-8ba8-48c6-838f-4b1bf83833e5' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.845274 [guppy/info] Read '79f0f352-866f-413e-874b-4e1c9482708a' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.856401 [guppy/info] Read '7b4a3921-39db-4de5-8182-ed60d9997723' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.871264 [guppy/info] Read '7d2e54a0-686c-4edd-8e3b-509482f42452' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.893233 [guppy/info] Read '7deeed5b-def0-4f8a-b756-9de30fb79a94' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.893308 [guppy/info] Read '7ed13a28-a1fd-4133-9518-3ca36e87794f' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.975183 [guppy/info] Read '8078a6a6-6796-47df-9041-ca39510e6c94' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:08.996486 [guppy/info] Read '810c0979-874f-46c8-be03-a89d8fe4db84' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.007156 [guppy/info] Read '84e05d77-efd6-436d-9bc6-5bbb6d55236e' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.070160 [guppy/info] Read '8d0f64f1-e1dd-4248-bcfe-88038158bd4a' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.081153 [guppy/info] Read '8ebc89a6-cfdc-40e8-a66b-4a7da6b852a4' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.081209 [guppy/info] Read '913f36f8-2f2f-4f28-8948-5aec4fa04ce4' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.081227 [guppy/info] Read '94af5934-56e6-4fd2-8fe0-847411ed4844' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.092152 [guppy/info] Read '9531ae87-36d1-4b38-bc1f-a117324d63ad' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.092207 [guppy/info] Read '979dedae-249f-4f8a-a204-6a002663fedc' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.103148 [guppy/info] Read '97e55130-94f7-4e84-80d5-21b0c0cb7a5f' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.114166 [guppy/info] Read '9ae3cdc5-57be-419b-899f-e37f38ccfa0f' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.114229 [guppy/info] Read '9d53be12-2316-43e8-9fff-52bf4d30132f' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.136167 [guppy/info] Read '9e0e8f5c-036d-462c-9f79-b68bc4f701d4' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.136236 [guppy/info] Read '9e7a71ac-0bfd-4ce7-bfae-5e0c37d73a99' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.136259 [guppy/info] Read '9faa7545-c71a-4601-abed-ba502efd3b6f' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.147160 [guppy/info] Read 'a4cb52a6-1784-4abd-829a-26b43477666d' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.169156 [guppy/info] Read 'a5c89a61-a32c-4c1d-9000-a0a5394ae914' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.180165 [guppy/info] Read 'a74ff64e-208d-4608-beed-1a28fd24e80d' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.191159 [guppy/info] Read 'a7d0ab0e-2432-441a-8746-30b450967789' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.237397 [guppy/info] Read 'a8961b0e-501e-44e8-9e35-7a7f6296c491' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.269400 [guppy/info] Read 'a989760e-5780-4284-a098-faa429783583' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.277383 [guppy/info] Read 'aaeeda03-62ef-49d0-b279-dd8380e5cd75' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.277445 [guppy/info] Read 'abc297b8-c733-4827-91a5-9ee60476a50c' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.281427 [guppy/info] Read 'aed31190-5bab-4cdc-b53e-0a22c1096eeb' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.285437 [guppy/info] Read 'afc252a0-5a6c-48b9-9e2d-082ba4d5794b' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.293363 [guppy/info] Read 'b3f4b3ca-9c58-4cee-80cd-4bc8c360b8a3' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.293416 [guppy/info] Read 'b51f0928-aada-4cdd-bf52-7b1eb6244f3d' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.312164 [guppy/info] Read 'b876c73b-ad98-4e1a-94d0-832ab553487f' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.312242 [guppy/info] Read 'bc9dad3b-26da-40f6-9fad-6a10d1375e40' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.330220 [guppy/info] Read 'c03a945b-5330-40db-998b-398b97728387' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.336216 [guppy/info] Read 'c06d0c43-75d2-49b1-8b62-b20e4a1b19f7' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.338200 [guppy/info] Read 'c14d55d9-c199-4468-a06d-0a6d855affea' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.347155 [guppy/info] Read 'c27b236a-5439-424d-941e-8b93be6dc073' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.347205 [guppy/info] Read 'c3130edc-57f2-4bea-a832-67f2765dffb5' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.352228 [guppy/info] Read 'c4e37cb5-086a-4dd2-b6de-0eba44e7a890' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.361154 [guppy/info] Read 'c9355fb1-d793-4220-9e59-5e4a92a4ebc4' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.361209 [guppy/info] Read 'cab710c2-6c2f-476d-9028-33666e59e657' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.361232 [guppy/info] Read 'cc6e0f04-27c8-4bfb-9316-2a0802f605ea' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.398157 [guppy/info] Read 'cf7f9a34-fe73-4f17-a3fa-de655d663881' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.403195 [guppy/info] Read 'd0364487-7a9b-477e-bf0e-15aefc734114' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.471223 [guppy/info] Read 'd0a0d7fc-8b4a-4bcf-8521-bdc4a71a3599' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.492208 [guppy/info] Read 'd0c241c9-0415-4180-8832-ac2143bf5757' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.516248 [guppy/info] Read 'd4ca7972-913b-4445-af12-e71f916829d3' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.527161 [guppy/info] Read 'd4e16f29-c7b5-4a87-a9ae-84b376da9434' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.544219 [guppy/info] Read 'd5065e7c-41a7-4746-bc1f-18d86f6e679d' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.567368 [guppy/info] Read 'd8cbf017-ee40-43ea-8e97-3ec96f8bcb92' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.581221 [guppy/info] Read 'd8d86321-c65e-4d54-af5e-ec1cc1eb09c2' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.624216 [guppy/info] Read 'd946ddd6-31e9-4378-8044-47ed00b6214c' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.628249 [guppy/info] Read 'd9f8db9e-8267-4013-a73d-931f5ad3fb99' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.629417 [guppy/info] Read 'da5a4323-e611-4f12-a181-e7716bd1cfa8' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.659242 [guppy/info] Read 'daf33c06-bb1b-4f8d-b09c-aa0e8199cc22' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.689173 [guppy/info] Read 'dd429f54-6930-4a72-ad52-d8c58811d72f' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.689242 [guppy/info] Read 'df893b96-828a-4e5c-9a7d-3d9a6e29ca77' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.711167 [guppy/info] Read 'e13b8d70-58de-423d-a45a-2292dd204ddb' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.741177 [guppy/info] Read 'e1f446d9-5bbb-4610-b47b-04a14e82abbb' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.771386 [guppy/info] Read 'e3b2e42b-f1b1-4269-beff-6a78253c04cd' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.771458 [guppy/info] Read 'e766b661-cfce-4d42-a247-89cee7901fed' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.789242 [guppy/info] Read 'eae4faae-0bd2-4ed5-aba6-423f3ac0a199' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.791196 [guppy/info] Read 'eaf049d5-6f28-45e7-af9e-119031eb895f' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.838202 [guppy/info] Read 'eca075a1-3dc7-4372-bea9-eea62c115b40' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.838275 [guppy/info] Read 'f3d79dad-3083-4693-84a8-49a74231c46e' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.854170 [guppy/info] Read 'f46099b0-a6a1-4163-8760-ba8c8d1249ca' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.877209 [guppy/info] Read 'f4bb2998-6c9a-491d-afd3-933e25260079' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.883210 [guppy/info] Read 'f681f6a8-8c3f-4293-85c4-fdc88ac25ada' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.984161 [guppy/info] Read 'fcd3a097-2dc5-4a92-9d42-2936e21f7ebb' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.988577 [guppy/info] Read 'fd6c0ee2-ed35-4b85-9711-a05ab7609a00' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:09.991199 [guppy/info] Read 'fea88fa6-c0e6-400e-a6eb-22ab4ba6c712' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:10.094331 [guppy/info] Read 'ff541fd8-b549-41a9-9877-03b05e2fd5b4' from file "B71example2.fast5" has been loaded.
+2022-03-25 01:25:10.095212 [guppy/info] Dispatched batch 0 containing 3 inputs:
+2022-03-25 01:25:10.095425 [guppy/info] Batch input 0 : input/ont_fast5/fast5/B71example0.fast5
+2022-03-25 01:25:10.095491 [guppy/info] Batch input 0 : input/ont_fast5/fast5/B71example1.fast5
+2022-03-25 01:25:10.095566 [guppy/info] Batch input 0 : input/ont_fast5/fast5/B71example2.fast5
+2022-03-25 01:25:16.661185 [guppy/info] Read '0f86cd7f-9bbb-4b64-a802-95165d69b3a8' from file "B71example0.fast5" completed.
+2022-03-25 01:25:16.661660 [guppy/info] Read '133abf72-fb73-4528-a69a-3edba9c0a6fa' from file "B71example0.fast5" completed.
+2022-03-25 01:25:32.981174 [guppy/info] Read '19ff1eff-0104-45b3-afa2-bd455bdbcac2' from file "B71example0.fast5" completed.
+2022-03-25 01:25:35.936180 [guppy/info] Read '026b6bf4-4ba7-4df3-983d-290fcb1090f2' from file "B71example0.fast5" completed.
+2022-03-25 01:25:41.016825 [guppy/info] Read '1543e847-c125-4a04-b880-287b6b85ae5e' from file "B71example0.fast5" completed.
+2022-03-25 01:25:44.052696 [guppy/info] Read '0794bce1-3937-4372-8f50-ccd1af8a296e' from file "B71example0.fast5" completed.
+2022-03-25 01:25:58.708897 [guppy/info] Read '8d6e7315-bbee-4144-b292-2fd11d2a1058' from file "B71example0.fast5" completed.
+2022-03-25 01:26:05.276187 [guppy/info] Read '953a7f8a-b58a-4ca2-97aa-79f9df5252a2' from file "B71example0.fast5" completed.
+2022-03-25 01:26:14.022216 [guppy/info] Read '1e615687-2300-418e-a140-a403cb616032' from file "B71example0.fast5" completed.
+2022-03-25 01:26:18.412244 [guppy/info] Read '1ea10498-ab9e-4b1d-907b-214ff5d85112' from file "B71example0.fast5" completed.
+2022-03-25 01:26:36.828202 [guppy/info] Read '08e1b3db-4655-41cf-ac82-6237b437bf51' from file "B71example0.fast5" completed.
+2022-03-25 01:26:37.513253 [guppy/info] Read '20f5b5fa-f8fa-49d7-9d86-3a6ddee1932c' from file "B71example0.fast5" completed.
+2022-03-25 01:26:45.167242 [guppy/info] Read 'a5d4162b-801b-4f50-bb81-e0caf6c72941' from file "B71example0.fast5" completed.
+2022-03-25 01:27:06.455467 [guppy/info] Read '29048f25-132d-482e-91c9-308adc564e12' from file "B71example0.fast5" completed.
+2022-03-25 01:27:06.931995 [guppy/info] Read '24da2c11-ea79-4eb4-bea2-2409659b20f5' from file "B71example0.fast5" completed.
+2022-03-25 01:27:25.863216 [guppy/info] Read '2839c007-c67b-4f15-91b6-53065890fcf8' from file "B71example0.fast5" completed.
+2022-03-25 01:27:32.674719 [guppy/info] Read '0d240301-b309-40ff-bc6b-1e413d45a771' from file "B71example0.fast5" completed.
+2022-03-25 01:27:40.722083 [guppy/info] Read '2be4d1f2-3703-4bf7-baba-2d0eb8ea0551' from file "B71example0.fast5" completed.
+2022-03-25 01:27:54.967179 [guppy/info] Read 'b7013229-23a1-408c-a7c8-b9a411be9cad' from file "B71example0.fast5" completed.
+2022-03-25 01:28:27.318182 [guppy/info] Read '3c06d500-67d3-4c4e-925c-04b8fff342dd' from file "B71example0.fast5" completed.
+2022-03-25 01:28:28.602185 [guppy/info] Read '29b4e49a-05dc-4f4c-b549-7435832aec86' from file "B71example0.fast5" completed.
+2022-03-25 01:28:33.849551 [guppy/info] Read '36eefe31-9d61-41dd-a5f7-103658b9675c' from file "B71example0.fast5" completed.
+2022-03-25 01:29:06.006186 [guppy/info] Read 'b76ab46c-96c9-4703-9c3f-be3223db0963' from file "B71example0.fast5" completed.
+2022-03-25 01:29:09.390917 [guppy/info] Read '41cd0a87-0906-4c43-8c5f-9a0e60947566' from file "B71example0.fast5" completed.
+2022-03-25 01:29:12.050236 [guppy/info] Read '2c27e1ff-b249-4a9b-900b-f772a3a25f31' from file "B71example0.fast5" completed.
+2022-03-25 01:29:32.890172 [guppy/info] Read '336eb6c1-cb3a-48f1-ada3-9c757151bdcd' from file "B71example0.fast5" completed.
+2022-03-25 01:29:36.359796 [guppy/info] Read 'c399bcad-3b5d-4c29-a342-44f740d2f222' from file "B71example0.fast5" completed.
+2022-03-25 01:29:50.583186 [guppy/info] Read '38562591-1c4f-44fd-acb8-f5b6800fafcb' from file "B71example0.fast5" completed.
+2022-03-25 01:30:00.556201 [guppy/info] Read '5c4562a3-bca9-491c-bf72-e51ec0cbdd45' from file "B71example0.fast5" completed.
+2022-03-25 01:30:12.091888 [guppy/info] Read '5f8931e4-ade7-4164-8ce4-6afcb9aa27a9' from file "B71example0.fast5" completed.
+2022-03-25 01:30:14.263210 [guppy/info] Read '3f7e6860-79aa-47cd-80aa-f5850674e103' from file "B71example0.fast5" completed.
+2022-03-25 01:30:23.601442 [guppy/info] Read '5fde3897-9541-4a24-bd43-01cd3e8a6811' from file "B71example0.fast5" completed.
+2022-03-25 01:30:25.379179 [guppy/info] Read 'c6b28e5b-db66-4333-abf2-d16687e3ebaf' from file "B71example0.fast5" completed.
+2022-03-25 01:30:29.625300 [guppy/info] Read '39bf0f8e-b76d-44fd-b3e0-904679f4c734' from file "B71example0.fast5" completed.
+2022-03-25 01:30:31.276959 [guppy/info] Read 'c6c3c9e0-8b03-4f11-9ac7-95a0e765c1f8' from file "B71example0.fast5" completed.
+2022-03-25 01:30:55.821614 [guppy/info] Read '47a52087-fd4d-409d-ba7c-1fd59896e758' from file "B71example0.fast5" completed.
+2022-03-25 01:31:09.488198 [guppy/info] Read '3dc337ce-2c90-45d2-a47f-24d59e508206' from file "B71example0.fast5" completed.
+2022-03-25 01:31:10.380181 [guppy/info] Read '61e247ff-6a2d-40a1-bbd9-629d622fdf7f' from file "B71example0.fast5" completed.
+2022-03-25 01:31:28.410201 [guppy/info] Read 'c89f8efc-0809-4a12-8426-678e299c000f' from file "B71example0.fast5" completed.
+2022-03-25 01:31:46.499194 [guppy/info] Read '44ecb384-3a51-4569-b33a-6d35d4e90ee4' from file "B71example0.fast5" completed.
+2022-03-25 01:31:49.231179 [guppy/info] Read '4a504d8a-e869-433f-8553-ac800291349a' from file "B71example0.fast5" completed.
+2022-03-25 01:31:51.439487 [guppy/info] Read '453ed5e6-27db-46f6-8399-5bc51a1207b2' from file "B71example0.fast5" completed.
+2022-03-25 01:31:56.355195 [guppy/info] Read '4efbe2a5-67fa-4732-808d-1521079d3b57' from file "B71example0.fast5" completed.
+2022-03-25 01:32:06.032766 [guppy/info] Read '506e4136-0500-405c-ac6e-2ff43994500d' from file "B71example0.fast5" completed.
+2022-03-25 01:32:22.141184 [guppy/info] Read 'c94ddaff-ee44-4af7-97fe-83097132106a' from file "B71example0.fast5" completed.
+2022-03-25 01:32:22.519198 [guppy/info] Read '46aaad2c-accb-4f37-8c27-8610539b754c' from file "B71example0.fast5" completed.
+2022-03-25 01:32:22.530196 [guppy/info] Read '6778ff9c-3397-46ee-9781-c08a0f911873' from file "B71example0.fast5" completed.
+2022-03-25 01:32:27.575061 [guppy/info] Read '510b12e3-69b3-4219-bbb4-730404f886ce' from file "B71example0.fast5" completed.
+2022-03-25 01:32:37.391941 [guppy/info] Read 'ca4915d7-394b-4495-8237-d30d6c564f3f' from file "B71example0.fast5" completed.
+2022-03-25 01:32:45.050211 [guppy/info] Read '7dbf1a92-b14f-467f-b7a3-00518c22349c' from file "B71example0.fast5" completed.
+2022-03-25 01:32:52.607190 [guppy/info] Read '48733a99-7a37-4b29-a1a8-0538b918202d' from file "B71example0.fast5" completed.
+2022-03-25 01:32:53.960207 [guppy/info] Read '5fdfc3c3-bf4a-405b-bf61-759652ffbbd9' from file "B71example0.fast5" completed.
+2022-03-25 01:33:25.306193 [guppy/info] Read '663a26f6-0063-44a4-8f6d-93ed97b60509' from file "B71example0.fast5" completed.
+2022-03-25 01:33:25.918796 [guppy/info] Read 'cabbb700-37a5-43c2-a1a2-a5db0af014bf' from file "B71example0.fast5" completed.
+2022-03-25 01:33:27.939289 [guppy/info] Read '5ac1edb2-dec8-4df3-8703-0cad3dba6d6b' from file "B71example0.fast5" completed.
+2022-03-25 01:33:29.326521 [guppy/info] Read '7eb19bf0-7d53-41c5-938f-da17bc052674' from file "B71example0.fast5" completed.
+2022-03-25 01:34:05.691346 [guppy/info] Read 'cad921b8-02fe-4076-963c-6aa28fe4f46f' from file "B71example0.fast5" completed.
+2022-03-25 01:34:12.260252 [guppy/info] Read '7ef37154-47f9-4377-9b65-e2faced5a82a' from file "B71example0.fast5" completed.
+2022-03-25 01:34:16.066255 [guppy/info] Read 'ceb17801-9898-435f-8cfb-81802e5a9d73' from file "B71example0.fast5" completed.
+2022-03-25 01:34:23.918203 [guppy/info] Read '68a27e58-326d-40df-9596-77945763ca71' from file "B71example0.fast5" completed.
+2022-03-25 01:34:25.419201 [guppy/info] Read 'd0835f42-d539-403a-8ced-cc076e0330d3' from file "B71example0.fast5" completed.
+2022-03-25 01:34:48.764788 [guppy/info] Read '6f1888bc-a7f2-4c0c-b969-f28ad94f6332' from file "B71example0.fast5" completed.
+2022-03-25 01:34:50.806323 [guppy/info] Read '6f8a6d19-4b79-41c3-9400-9ad787fe4510' from file "B71example0.fast5" completed.
+2022-03-25 01:35:09.896312 [guppy/info] Read '80061805-7224-47af-8939-0f9fcee24053' from file "B71example0.fast5" completed.
+2022-03-25 01:35:34.384591 [guppy/info] Read 'd10fd348-96f9-4edb-b67d-65921314b8d5' from file "B71example0.fast5" completed.
+2022-03-25 01:35:39.981250 [guppy/info] Read '6e6c75bb-c21b-48f6-a428-1e17edbb820d' from file "B71example0.fast5" completed.
+2022-03-25 01:35:49.966853 [guppy/info] Read 'd9a58770-d081-4147-b9b5-20e06c1dac0b' from file "B71example0.fast5" completed.
+2022-03-25 01:35:52.686253 [guppy/info] Read '6e816c4e-a44b-4a29-b647-12fdfeb8b96b' from file "B71example0.fast5" completed.
+2022-03-25 01:36:07.701755 [guppy/info] Read '7ed6d64d-075a-44bc-86eb-3ec513b12b93' from file "B71example0.fast5" completed.
+2022-03-25 01:36:15.515216 [guppy/info] Read 'dbb4df27-f149-4d24-919d-c0bc287c23d0' from file "B71example0.fast5" completed.
+2022-03-25 01:36:18.929179 [guppy/info] Read '78488af0-37e0-432c-9008-4eda8f431297' from file "B71example0.fast5" completed.
+2022-03-25 01:36:25.635187 [guppy/info] Read '82d6f3a6-8151-4394-937f-cdcebde33e67' from file "B71example0.fast5" completed.
+2022-03-25 01:36:25.781225 [guppy/info] Read '8c86d344-50ae-4731-acbb-6ba9ae6e94a0' from file "B71example0.fast5" completed.
+2022-03-25 01:36:30.686443 [guppy/info] Read '8ddb01cc-0575-4873-b693-3f1cc689faf8' from file "B71example0.fast5" completed.
+2022-03-25 01:36:34.220195 [guppy/info] Read '8fd9733f-2d0e-489b-a08c-91cd3f25136b' from file "B71example0.fast5" completed.
+2022-03-25 01:36:49.660195 [guppy/info] Read '786b5033-a069-47cc-9969-2cfb8743a089' from file "B71example0.fast5" completed.
+2022-03-25 01:36:55.108190 [guppy/info] Read 'e00b58f6-6ba2-43f3-b0cf-e1947ebcf534' from file "B71example0.fast5" completed.
+2022-03-25 01:37:03.787358 [guppy/info] Read 'e04522d4-2de0-4676-8935-3439bafd5d34' from file "B71example0.fast5" completed.
+2022-03-25 01:37:09.602180 [guppy/info] Read 'e20b4b3e-5662-4cb7-a45f-c4e6348656b7' from file "B71example0.fast5" completed.
+2022-03-25 01:37:18.655182 [guppy/info] Read '8cc4f163-d76e-464a-aacb-9d6603e55b89' from file "B71example0.fast5" completed.
+2022-03-25 01:37:21.654283 [guppy/info] Read '906feebf-ab36-47ad-a0ae-c0bc89e7b525' from file "B71example0.fast5" completed.
+2022-03-25 01:37:24.199190 [guppy/info] Read '79c429f2-7921-4f3b-aaff-6e370d32489d' from file "B71example0.fast5" completed.
+2022-03-25 01:37:33.614193 [guppy/info] Read '79e155fc-32aa-44bf-a13d-c55e3c8e6c50' from file "B71example0.fast5" completed.
+2022-03-25 01:37:47.777231 [guppy/info] Read '92e72b28-d679-4d6e-b7c4-db045ce36082' from file "B71example0.fast5" completed.
+2022-03-25 01:38:09.353168 [guppy/info] Read '94d0dc51-89c0-485a-a7bd-f582a9e42366' from file "B71example0.fast5" completed.
+2022-03-25 01:38:12.499227 [guppy/info] Read '7dc0334d-b687-43fe-bcfd-64cc2521bed6' from file "B71example0.fast5" completed.
+2022-03-25 01:38:16.365183 [guppy/info] Read 'e5f97851-23a4-4a90-9fbc-97f7fe26be7d' from file "B71example0.fast5" completed.
+2022-03-25 01:38:38.120249 [guppy/info] Read '9e5329ca-bcce-438c-9d5b-70248913a209' from file "B71example0.fast5" completed.
+2022-03-25 01:38:41.949210 [guppy/info] Read '7e6568db-68e2-4545-910b-1c49ad8d08c6' from file "B71example0.fast5" completed.
+2022-03-25 01:38:46.364026 [guppy/info] Read 'e68569f6-06f7-4c26-8703-4725cf4d8974' from file "B71example0.fast5" completed.
+2022-03-25 01:39:13.939811 [guppy/info] Read 'a3c8392c-1582-4777-b50d-0239b15bb94c' from file "B71example0.fast5" completed.
+2022-03-25 01:39:19.279821 [guppy/info] Read 'e6fcae70-a8d7-4e79-b02d-a3c7696f63a5' from file "B71example0.fast5" completed.
+2022-03-25 01:39:30.133675 [guppy/info] Read '9f287d5c-18bf-45d1-8ecb-16e048f8c5e0' from file "B71example0.fast5" completed.
+2022-03-25 01:39:43.461812 [guppy/info] Read 'a0703d2b-ca90-4d4b-a0b2-0dd988d4621f' from file "B71example0.fast5" completed.
+2022-03-25 01:39:51.145235 [guppy/info] Read 'e8921d47-8163-4aba-a205-03cb409e69ae' from file "B71example0.fast5" completed.
+2022-03-25 01:39:55.745208 [guppy/info] Read 'e9ace0dd-20a6-4c95-9b7d-8877980347bc' from file "B71example0.fast5" completed.
+2022-03-25 01:40:00.376618 [guppy/info] Read 'a5faaccf-f9b7-4706-b1bf-b91da7be64cb' from file "B71example0.fast5" completed.
+2022-03-25 01:40:11.891111 [guppy/info] Read 'b7483a15-7c35-4dd1-97b4-bb30609f76c7' from file "B71example0.fast5" completed.
+2022-03-25 01:40:19.482198 [guppy/info] Read 'c53c0247-ccba-4d88-90d5-a901918512a6' from file "B71example0.fast5" completed.
+2022-03-25 01:40:40.559200 [guppy/info] Read 'eb141b22-39fc-4439-9665-ac958b7c0f8b' from file "B71example0.fast5" completed.
+2022-03-25 01:40:45.951667 [guppy/info] Read 'aa5e19c7-7936-4582-beda-ef72347b83d9' from file "B71example0.fast5" completed.
+2022-03-25 01:41:05.975199 [guppy/info] Read 'e396707c-44a9-4e54-923b-8ff1f832d473' from file "B71example0.fast5" completed.
+2022-03-25 01:41:15.452185 [guppy/info] Read '21f689a0-40c7-4964-8a94-d62f76b54797' from file "B71example1.fast5" completed.
+2022-03-25 01:41:34.689196 [guppy/info] Read 'e446fb9e-182c-460f-927f-b5124a59e492' from file "B71example0.fast5" completed.
+2022-03-25 01:41:41.191819 [guppy/info] Read 'cbf3ea1a-7369-42d8-be98-b51f07bcee5a' from file "B71example0.fast5" completed.
+2022-03-25 01:41:51.372327 [guppy/info] Read 'ac487358-7205-4d8d-bad7-051be57669da' from file "B71example1.fast5" completed.
+2022-03-25 01:42:06.254268 [guppy/info] Read 'ac8af055-d9d7-4c23-8c24-88b3b3f457fc' from file "B71example1.fast5" completed.
+2022-03-25 01:42:17.814495 [guppy/info] Read 'abb9dc45-08c6-4192-bbda-7bb1dc2a49f4' from file "B71example0.fast5" completed.
+2022-03-25 01:42:18.477205 [guppy/info] Read 'e5c13739-ca58-4e60-b5f1-5be66a567dfa' from file "B71example0.fast5" completed.
+2022-03-25 01:42:32.298211 [guppy/info] Read 'ae872141-d728-43c7-8f65-625ac1f563f9' from file "B71example0.fast5" completed.
+2022-03-25 01:42:34.422178 [guppy/info] Read 'fb36c6fa-864e-4420-915b-7a0bd1400d75' from file "B71example0.fast5" completed.
+2022-03-25 01:42:41.277212 [guppy/info] Read 'e5baf8d2-7c5d-45ed-90bc-e1e4d1aaf9e6' from file "B71example1.fast5" completed.
+2022-03-25 01:42:49.054220 [guppy/info] Read 'd905f4e4-1ba6-4ba4-a296-cb5ee6b2b98d' from file "B71example0.fast5" completed.
+2022-03-25 01:43:03.970225 [guppy/info] Read 'e7a1deda-d87b-4f1a-a6af-87cdf0744bec' from file "B71example1.fast5" completed.
+2022-03-25 01:43:13.478209 [guppy/info] Read 'b17eb435-e8d0-46bb-8567-809b9f03e551' from file "B71example0.fast5" completed.
+2022-03-25 01:43:34.613188 [guppy/info] Read 'fc7aa131-f9ae-491d-8a31-f692622751a5' from file "B71example0.fast5" completed.
+2022-03-25 01:43:56.596198 [guppy/info] Read 'b485661a-0485-4179-9ad1-823ee1726b7f' from file "B71example0.fast5" completed.
+2022-03-25 01:44:07.413293 [guppy/info] Read 'eea48d4c-4391-4c89-9f8d-0a94a2885447' from file "B71example1.fast5" completed.
+2022-03-25 01:44:12.382179 [guppy/info] Read 'fcc79fe3-19cb-4330-9c81-a688993a3574' from file "B71example0.fast5" completed.
+2022-03-25 01:44:14.561200 [guppy/info] Read 'ef1d9379-9f1b-46c6-bcc3-6903fade8926' from file "B71example1.fast5" completed.
+2022-03-25 01:44:24.550166 [guppy/info] Read 'dba4caf3-06c6-4b1e-bd0d-3cdf1b31b1c2' from file "B71example0.fast5" completed.
+2022-03-25 01:44:25.671467 [guppy/info] Read 'ed83f816-d076-4d6b-93eb-ec1d86d1e666' from file "B71example0.fast5" completed.
+2022-03-25 01:44:45.165690 [guppy/info] Read '000cca4b-72fa-47cb-812d-740d5b171fff' from file "B71example1.fast5" completed.
+2022-03-25 01:44:56.578165 [guppy/info] Read 'f474f529-e2ac-43b4-850d-b004dde23243' from file "B71example0.fast5" completed.
+2022-03-25 01:45:10.443227 [guppy/info] Read 'f28c7b98-1552-4fef-9d69-3924c35d712a' from file "B71example1.fast5" completed.
+2022-03-25 01:45:16.157172 [guppy/info] Read 'ba27116c-4207-40ab-814b-1d3b7d058123' from file "B71example0.fast5" completed.
+2022-03-25 01:45:21.645175 [guppy/info] Read 'bcd64874-14e2-4833-b502-de0a2f933313' from file "B71example0.fast5" completed.
+2022-03-25 01:45:41.448198 [guppy/info] Read 'bd5a7c8a-c71b-4dee-93f8-65a07a1a5968' from file "B71example0.fast5" completed.
+2022-03-25 01:45:51.440204 [guppy/info] Read '001d7213-ea22-432b-86ea-ef7f1585e237' from file "B71example1.fast5" completed.
+2022-03-25 01:45:52.621198 [guppy/info] Read 'f59a2b09-89d3-41fb-9416-ae52f65d353a' from file "B71example0.fast5" completed.
+2022-03-25 01:46:06.754215 [guppy/info] Read 'f3cdbaca-cd0e-4ba0-9932-31411c863b9e' from file "B71example1.fast5" completed.
+2022-03-25 01:46:33.865237 [guppy/info] Read '038007c7-84f2-4d68-8386-47fbf46f04cb' from file "B71example1.fast5" completed.
+2022-03-25 01:46:43.302188 [guppy/info] Read 'f71d60c5-1b30-400e-9a32-3da812f545b9' from file "B71example1.fast5" completed.
+2022-03-25 01:46:45.971225 [guppy/info] Read 'f66616ef-9a93-4c0d-a90a-9104ca6be548' from file "B71example0.fast5" completed.
+2022-03-25 01:46:46.037196 [guppy/info] Read 'bffaff5e-bc60-419e-ae4f-1eadfd9b3c5a' from file "B71example0.fast5" completed.
+2022-03-25 01:46:56.385211 [guppy/info] Read 'd35a495d-2704-4149-b307-2ff1fea6bf33' from file "B71example0.fast5" completed.
+2022-03-25 01:47:21.707210 [guppy/info] Read 'f851233a-6569-4de9-bcdb-4bfcb2597a67' from file "B71example1.fast5" completed.
+2022-03-25 01:47:28.979601 [guppy/info] Read '12e8c5f9-4eb5-4562-a76f-e884633d28cd' from file "B71example1.fast5" completed.
+2022-03-25 01:47:32.023187 [guppy/info] Read 'd638d77a-33a5-4f91-8412-7c8a0f9a88c3' from file "B71example0.fast5" completed.
+2022-03-25 01:47:38.140814 [guppy/info] Read '003d0256-e20c-4c17-bf63-9ffb399d2c64' from file "B71example1.fast5" completed.
+2022-03-25 01:47:41.617175 [guppy/info] Read '00482b2d-f18f-4b75-a05b-d7fcf34e0326' from file "B71example1.fast5" completed.
+2022-03-25 01:47:45.682821 [guppy/info] Read 'fd517bd9-a11c-4f35-bbac-f746978a13ed' from file "B71example1.fast5" completed.
+2022-03-25 01:48:05.233169 [guppy/info] Read 'e25220e7-7863-4b96-ac35-c10839a74501' from file "B71example0.fast5" completed.
+2022-03-25 01:48:09.823189 [guppy/info] Read '1da57989-ec90-48d2-9fe6-1a3842daa8c4' from file "B71example1.fast5" completed.
+2022-03-25 01:48:16.330183 [guppy/info] Read '040afcb6-5309-4a7c-a2b8-3759be2c5ebb' from file "B71example1.fast5" completed.
+2022-03-25 01:48:36.648482 [guppy/info] Read '0075b317-c096-4e58-af7d-b8250b91908a' from file "B71example2.fast5" completed.
+2022-03-25 01:48:46.491182 [guppy/info] Read '1ea91af5-3f29-4821-a39b-a906ba849419' from file "B71example1.fast5" completed.
+2022-03-25 01:48:47.613188 [guppy/info] Read '04605447-16ed-4602-a5e5-1da9023fa95a' from file "B71example1.fast5" completed.
+2022-03-25 01:48:48.755220 [guppy/info] Read '0ea3deec-8209-4f16-87aa-24dc70492a52' from file "B71example2.fast5" completed.
+2022-03-25 01:48:56.173243 [guppy/info] Read '1f2ed4f0-2c0b-4352-956f-cef476abb8a7' from file "B71example1.fast5" completed.
+2022-03-25 01:49:01.172597 [guppy/info] Read '050acfba-89b8-49bf-a97c-63874291d044' from file "B71example1.fast5" completed.
+2022-03-25 01:49:15.028187 [guppy/info] Read 'e4a4848d-068a-4044-8971-1f96c17991d5' from file "B71example0.fast5" completed.
+2022-03-25 01:49:21.510204 [guppy/info] Read '47a8eada-7e60-4cdf-b1cf-9e44c2226694' from file "B71example1.fast5" completed.
+2022-03-25 01:49:25.444249 [guppy/info] Read '289722c1-520e-40a5-b723-f9b2e3d78baf' from file "B71example2.fast5" completed.
+2022-03-25 01:49:39.419670 [guppy/info] Read '08817bfc-edbb-4dda-bede-d6641192b84e' from file "B71example1.fast5" completed.
+2022-03-25 01:50:08.731203 [guppy/info] Read '386f4611-c5dd-42a8-81db-6a604fd89578' from file "B71example2.fast5" completed.
+2022-03-25 01:50:21.841202 [guppy/info] Read 'f4e48251-e55e-416c-a5d4-995538a013d6' from file "B71example0.fast5" completed.
+2022-03-25 01:50:25.860241 [guppy/info] Read '5557e7e8-745a-4d2e-b1aa-6607388239dd' from file "B71example1.fast5" completed.
+2022-03-25 01:50:33.553701 [guppy/info] Read '1223257f-fbac-4a93-8359-51bb8c19e040' from file "B71example1.fast5" completed.
+2022-03-25 01:50:41.168224 [guppy/info] Read '5809074d-053b-4044-906a-d8ddc0b53b19' from file "B71example1.fast5" completed.
+2022-03-25 01:50:48.638773 [guppy/info] Read '3abb8ff9-3025-453d-a7c4-3da9e85f4ce5' from file "B71example2.fast5" completed.
+2022-03-25 01:51:06.727245 [guppy/info] Read 'fb1fdc96-aafa-4aa4-a5da-c7a199e49dd0' from file "B71example0.fast5" completed.
+2022-03-25 01:51:10.691179 [guppy/info] Read '3d109b34-958c-4c1a-83bc-20c40a1c9110' from file "B71example2.fast5" completed.
+2022-03-25 01:51:41.285047 [guppy/info] Read '5f9b1fe5-fc88-4936-88c0-45c9cbef6f10' from file "B71example1.fast5" completed.
+2022-03-25 01:51:49.866269 [guppy/info] Read '3fb3dfc7-0fc6-4b1a-af42-fe61bd0f7997' from file "B71example2.fast5" completed.
+2022-03-25 01:51:54.173186 [guppy/info] Read '186c26b1-a0d7-4c9a-a293-46c6d5886ea9' from file "B71example1.fast5" completed.
+2022-03-25 01:52:08.740184 [guppy/info] Read 'fed065d3-0f52-46fa-a759-580661df2435' from file "B71example0.fast5" completed.
+2022-03-25 01:52:35.476163 [guppy/info] Read '3464c0ed-9df7-4b9d-adc9-e3662f85e10c' from file "B71example1.fast5" completed.
+2022-03-25 01:52:41.514274 [guppy/info] Read '477caf16-491d-4064-bcc3-22721cfb7fc9' from file "B71example2.fast5" completed.
+2022-03-25 01:52:45.241657 [guppy/info] Read '48158a29-a10d-4de1-b83d-564f7612861f' from file "B71example2.fast5" completed.
+2022-03-25 01:52:46.569173 [guppy/info] Read '7894e557-3a92-435e-be40-62484bafa12e' from file "B71example1.fast5" completed.
+2022-03-25 01:52:52.364195 [guppy/info] Read '092b60f1-f9db-45e3-b21b-a3d17755840b' from file "B71example1.fast5" completed.
+2022-03-25 01:53:28.920895 [guppy/info] Read 'adb39cb5-28d5-4d0a-88ac-c14bf5861dad' from file "B71example1.fast5" completed.
+2022-03-25 01:53:40.171170 [guppy/info] Read '4c201993-65e7-4326-b691-3bb7f5d7d33b' from file "B71example2.fast5" completed.
+2022-03-25 01:53:45.948173 [guppy/info] Read '7a59f859-6147-4501-9b23-e163aa2f7194' from file "B71example1.fast5" completed.
+2022-03-25 01:54:04.923261 [guppy/info] Read '4eb3a571-d9bc-4d7a-8f61-5dc2d211e3ce' from file "B71example2.fast5" completed.
+2022-03-25 01:54:09.919303 [guppy/info] Read '7efb76cc-6c9d-4690-b2d1-9242f5124304' from file "B71example1.fast5" completed.
+2022-03-25 01:54:10.598208 [guppy/info] Read '7f6f5fc9-c45d-4117-a11e-5e435f166520' from file "B71example1.fast5" completed.
+2022-03-25 01:54:15.233262 [guppy/info] Read '11040ba2-d5ef-4562-be26-9f79253e5455' from file "B71example1.fast5" completed.
+2022-03-25 01:54:17.675478 [guppy/info] Read 'ae5737c2-5587-4154-bdf1-fc721f1066ea' from file "B71example1.fast5" completed.
+2022-03-25 01:54:28.816205 [guppy/info] Read 'b099e350-1cbd-467f-aaf9-167999988374' from file "B71example1.fast5" completed.
+2022-03-25 01:54:42.138271 [guppy/info] Read '129263ba-2c6d-4a73-9c27-d20e1661500b' from file "B71example1.fast5" completed.
+2022-03-25 01:54:44.113567 [guppy/info] Read '800a28e5-a932-4d9c-be04-1af9e7fa8895' from file "B71example1.fast5" completed.
+2022-03-25 01:54:55.241209 [guppy/info] Read '55e45dd1-0514-4616-8619-3b8afdcf0beb' from file "B71example2.fast5" completed.
+2022-03-25 01:54:57.253193 [guppy/info] Read 'b18cf66d-8452-4532-ad21-136f6895cd30' from file "B71example1.fast5" completed.
+2022-03-25 01:55:17.061246 [guppy/info] Read '130b402f-2f4b-4b58-954b-a2857775949e' from file "B71example1.fast5" completed.
+2022-03-25 01:55:22.074548 [guppy/info] Read '172e7b0e-4b95-4e19-9ee4-da2019d47645' from file "B71example1.fast5" completed.
+2022-03-25 01:55:36.762202 [guppy/info] Read '5f92ffed-db63-40e9-8791-fa7ef7631a3f' from file "B71example2.fast5" completed.
+2022-03-25 01:55:50.464346 [guppy/info] Read '86707e46-e629-4f97-8d16-626ad0dfe352' from file "B71example1.fast5" completed.
+2022-03-25 01:55:57.196319 [guppy/info] Read 'b2a76ccb-b129-4ee4-8d86-31f683d2cd78' from file "B71example1.fast5" completed.
+2022-03-25 01:56:05.621224 [guppy/info] Read '619d5750-b672-4269-8995-f6af2579d6e5' from file "B71example2.fast5" completed.
+2022-03-25 01:56:33.180199 [guppy/info] Read '19261fb4-7bab-498d-89b8-f5381a3cdaa2' from file "B71example1.fast5" completed.
+2022-03-25 01:56:34.057255 [guppy/info] Read '621c143f-5b1a-4a8d-920f-b812ba5e153e' from file "B71example2.fast5" completed.
+2022-03-25 01:56:45.037458 [guppy/info] Read '62ce28bd-ed03-4d15-864a-60be7423538f' from file "B71example2.fast5" completed.
+2022-03-25 01:56:46.920176 [guppy/info] Read 'bb1d522e-86b9-4121-bfe9-47373a7373dd' from file "B71example1.fast5" completed.
+2022-03-25 01:56:59.639221 [guppy/info] Read '8fec2825-191a-4a83-b955-9a5563c4d128' from file "B71example1.fast5" completed.
+2022-03-25 01:57:04.516176 [guppy/info] Read '90f85b2b-c824-4fb5-a0fe-396b484f69bf' from file "B71example1.fast5" completed.
+2022-03-25 01:57:09.561228 [guppy/info] Read '7136bf9b-d021-4e75-922e-fb51b87e668d' from file "B71example2.fast5" completed.
+2022-03-25 01:57:14.816525 [guppy/info] Read 'ec7494b8-aa70-4ac6-b3e5-a658a38165e9' from file "B71example1.fast5" completed.
+2022-03-25 01:57:23.295184 [guppy/info] Read '1a349a82-0e5d-4e49-b46f-dff201bfbc4b' from file "B71example1.fast5" completed.
+2022-03-25 01:57:33.861236 [guppy/info] Read 'ecf4b4c3-ca3f-4380-9b8c-6a55f5028783' from file "B71example1.fast5" completed.
+2022-03-25 01:57:55.593214 [guppy/info] Read '746e1d22-8ba8-48c6-838f-4b1bf83833e5' from file "B71example2.fast5" completed.
+2022-03-25 01:57:58.628277 [guppy/info] Read 'fd3c1f47-3421-44eb-9180-7f3ba5a5ce6d' from file "B71example1.fast5" completed.
+2022-03-25 01:57:59.972193 [guppy/info] Read '79f0f352-866f-413e-874b-4e1c9482708a' from file "B71example2.fast5" completed.
+2022-03-25 01:58:15.134176 [guppy/info] Read '9db7c56b-eebf-434a-a0e9-c680c6afff65' from file "B71example1.fast5" completed.
+2022-03-25 01:58:24.832215 [guppy/info] Read '050467c9-0254-4aef-b0f5-2f808a78d7e0' from file "B71example2.fast5" completed.
+2022-03-25 01:58:32.823233 [guppy/info] Read '1aaba9bd-c7ab-4d16-8e98-47dcc695be4a' from file "B71example1.fast5" completed.
+2022-03-25 01:58:54.190202 [guppy/info] Read '8ebc89a6-cfdc-40e8-a66b-4a7da6b852a4' from file "B71example2.fast5" completed.
+2022-03-25 01:58:59.137184 [guppy/info] Read '9e1b0151-9723-4f06-a369-cf8a4441e3b1' from file "B71example1.fast5" completed.
+2022-03-25 01:59:10.093612 [guppy/info] Read '913f36f8-2f2f-4f28-8948-5aec4fa04ce4' from file "B71example2.fast5" completed.
+2022-03-25 01:59:11.225196 [guppy/info] Read '9ebb6d24-6b8e-4832-bb1d-7ffcc940276d' from file "B71example1.fast5" completed.
+2022-03-25 01:59:21.179210 [guppy/info] Read '94af5934-56e6-4fd2-8fe0-847411ed4844' from file "B71example2.fast5" completed.
+2022-03-25 01:59:32.845550 [guppy/info] Read '08c1b1a4-dee7-4582-8644-12d021ff3d9f' from file "B71example2.fast5" completed.
+2022-03-25 01:59:44.954965 [guppy/info] Read '1d7922b5-290a-477e-84d8-50fd14ade459' from file "B71example1.fast5" completed.
+2022-03-25 01:59:56.680240 [guppy/info] Read '9531ae87-36d1-4b38-bc1f-a117324d63ad' from file "B71example2.fast5" completed.
+2022-03-25 01:59:57.293929 [guppy/info] Read '9f1ed561-34b8-4fe1-bc67-13b6f7b8b82c' from file "B71example1.fast5" completed.
+2022-03-25 02:00:24.942275 [guppy/info] Read '2690031d-9d9a-4913-812b-33290a3c3e36' from file "B71example1.fast5" completed.
+2022-03-25 02:00:28.783171 [guppy/info] Read '979dedae-249f-4f8a-a204-6a002663fedc' from file "B71example2.fast5" completed.
+2022-03-25 02:00:45.754248 [guppy/info] Read 'aa6b92c0-d416-4207-9bd4-08ef75d12cab' from file "B71example1.fast5" completed.
+2022-03-25 02:01:04.027226 [guppy/info] Read '31814433-7f70-4d55-9495-e12e02126485' from file "B71example1.fast5" completed.
+2022-03-25 02:01:08.062177 [guppy/info] Read '9ae3cdc5-57be-419b-899f-e37f38ccfa0f' from file "B71example2.fast5" completed.
+2022-03-25 02:01:10.592174 [guppy/info] Read '33c82af6-160c-4514-b941-20ec8b8d589b' from file "B71example1.fast5" completed.
+2022-03-25 02:01:13.223183 [guppy/info] Read '0e08926b-b3df-4bfc-9071-57c6bbf0a629' from file "B71example2.fast5" completed.
+2022-03-25 02:01:15.776181 [guppy/info] Read 'c9822071-5474-4f34-b26e-82784b5c0ce3' from file "B71example1.fast5" completed.
+2022-03-25 02:01:22.061173 [guppy/info] Read '9d53be12-2316-43e8-9fff-52bf4d30132f' from file "B71example2.fast5" completed.
+2022-03-25 02:01:45.680822 [guppy/info] Read '0f529c15-d578-4e45-8c41-c3aa52aba9c6' from file "B71example2.fast5" completed.
+2022-03-25 02:01:58.688259 [guppy/info] Read 'cc3b7cb7-5033-46ba-83e8-c1493dab60d3' from file "B71example1.fast5" completed.
+2022-03-25 02:02:01.103700 [guppy/info] Read '34094bc7-00f8-4be7-8e0b-df09e96d50b8' from file "B71example1.fast5" completed.
+2022-03-25 02:02:09.280201 [guppy/info] Read 'b3f4b3ca-9c58-4cee-80cd-4bc8c360b8a3' from file "B71example2.fast5" completed.
+2022-03-25 02:02:09.280752 [guppy/info] Read 'b51f0928-aada-4cdd-bf52-7b1eb6244f3d' from file "B71example2.fast5" completed.
+2022-03-25 02:02:12.507196 [guppy/info] Read '1329234d-3df5-4195-9ef7-9bc8e28dede6' from file "B71example2.fast5" completed.
+2022-03-25 02:02:29.918303 [guppy/info] Read 'cf03a3d3-e35a-4a3c-b678-d59b860c2ea2' from file "B71example1.fast5" completed.
+2022-03-25 02:02:43.313116 [guppy/info] Read '1a551e76-fbad-4549-8682-cf0c9f48b7d6' from file "B71example2.fast5" completed.
+2022-03-25 02:02:45.105219 [guppy/info] Read '36bcd48e-33bb-461c-ad4f-d453e17aebff' from file "B71example1.fast5" completed.
+2022-03-25 02:03:01.819523 [guppy/info] Read 'c03a945b-5330-40db-998b-398b97728387' from file "B71example2.fast5" completed.
+2022-03-25 02:03:02.171660 [guppy/info] Read 'd3c23a11-4826-48fe-a5fc-2a309811573d' from file "B71example1.fast5" completed.
+2022-03-25 02:03:14.369048 [guppy/info] Read '391d7930-7472-4d7f-aa98-9cd09d5ca773' from file "B71example1.fast5" completed.
+2022-03-25 02:03:33.652204 [guppy/info] Read 'd6dc45e8-e319-4948-ab34-b23dd28cc929' from file "B71example1.fast5" completed.
+2022-03-25 02:03:37.933368 [guppy/info] Read 'c9355fb1-d793-4220-9e59-5e4a92a4ebc4' from file "B71example2.fast5" completed.
+2022-03-25 02:03:43.244564 [guppy/info] Read '3b9372a6-0afe-4fe8-b071-a2f1f75d3481' from file "B71example1.fast5" completed.
+2022-03-25 02:03:51.756229 [guppy/info] Read '3bfc3787-2fa3-48cf-b6e8-b97e085c4578' from file "B71example1.fast5" completed.
+2022-03-25 02:03:56.710172 [guppy/info] Read 'cab710c2-6c2f-476d-9028-33666e59e657' from file "B71example2.fast5" completed.
+2022-03-25 02:04:03.599226 [guppy/info] Read 'cc6e0f04-27c8-4bfb-9316-2a0802f605ea' from file "B71example2.fast5" completed.
+2022-03-25 02:04:09.289179 [guppy/info] Read '1b35e5c1-e95a-43dc-a6e8-e0866173ed1b' from file "B71example2.fast5" completed.
+2022-03-25 02:04:21.519968 [guppy/info] Read 'd9a67da9-f92d-4f3e-8f1b-59b73f194d0d' from file "B71example1.fast5" completed.
+2022-03-25 02:04:25.624327 [guppy/info] Read '3c4ba64d-be37-4fd6-afee-f29b94ea6826' from file "B71example1.fast5" completed.
+2022-03-25 02:04:37.981185 [guppy/info] Read 'd4e16f29-c7b5-4a87-a9ae-84b376da9434' from file "B71example2.fast5" completed.
+2022-03-25 02:04:47.568212 [guppy/info] Read '2116c10c-83f8-47ef-99a0-8276b329fff1' from file "B71example2.fast5" completed.
+2022-03-25 02:04:54.919741 [guppy/info] Read 'd9b88d73-6a72-4a23-90a5-7d07f22f1b70' from file "B71example1.fast5" completed.
+2022-03-25 02:05:06.162189 [guppy/info] Read 'e338c7c4-908d-40dd-9750-4435a9a1bb0b' from file "B71example1.fast5" completed.
+2022-03-25 02:05:20.625283 [guppy/info] Read '3dac8428-d51d-4c70-9e6b-d86ae3c6dffe' from file "B71example1.fast5" completed.
+2022-03-25 02:05:31.299189 [guppy/info] Read 'd5065e7c-41a7-4746-bc1f-18d86f6e679d' from file "B71example2.fast5" completed.
+2022-03-25 02:05:49.206254 [guppy/info] Read '30c426c9-2d06-4d1b-8697-c676c3dda746' from file "B71example2.fast5" completed.
+2022-03-25 02:05:58.617250 [guppy/info] Read '4129a64a-b389-473c-8361-153e32cef8e1' from file "B71example1.fast5" completed.
+2022-03-25 02:06:11.739335 [guppy/info] Read '3cbd0915-e157-4e47-9682-6180b7c5fae3' from file "B71example2.fast5" completed.
+2022-03-25 02:06:22.152251 [guppy/info] Read 'e0c2fbea-c1ea-40bd-9be8-f53bfc91cde5' from file "B71example1.fast5" completed.
+2022-03-25 02:06:46.130267 [guppy/info] Read '45865df3-bdb0-4cf6-a8f8-fa6124c266c4' from file "B71example1.fast5" completed.
+2022-03-25 02:06:52.469197 [guppy/info] Read 'e3b2e42b-f1b1-4269-beff-6a78253c04cd' from file "B71example2.fast5" completed.
+2022-03-25 02:06:54.387287 [guppy/info] Read 'f9f3220e-014a-4d79-83da-7720ac7bc3c7' from file "B71example1.fast5" completed.
+2022-03-25 02:06:56.184210 [guppy/info] Read '3d08f548-dd1e-414b-8e93-d3e985a000e2' from file "B71example2.fast5" completed.
+2022-03-25 02:07:06.889215 [guppy/info] Read 'fa6579f0-37b4-486c-9678-a39b62032e85' from file "B71example1.fast5" completed.
+2022-03-25 02:07:18.241233 [guppy/info] Read 'e766b661-cfce-4d42-a247-89cee7901fed' from file "B71example2.fast5" completed.
+2022-03-25 02:07:42.281420 [guppy/info] Read 'fcd81555-6297-4e39-873c-a1a325712e3f' from file "B71example1.fast5" completed.
+2022-03-25 02:07:47.649209 [guppy/info] Read '3dc84b40-cbd7-467b-bceb-41a6c3571d88' from file "B71example2.fast5" completed.
+2022-03-25 02:07:50.693232 [guppy/info] Read '46357d6e-57b5-44a3-a6ff-9d14950a979b' from file "B71example1.fast5" completed.
+2022-03-25 02:08:01.716185 [guppy/info] Read 'f46099b0-a6a1-4163-8760-ba8c8d1249ca' from file "B71example2.fast5" completed.
+2022-03-25 02:08:09.534196 [guppy/info] Read '3ff89fb1-66d2-43f7-a7ec-c70a37c3bc90' from file "B71example2.fast5" completed.
+2022-03-25 02:08:12.075214 [guppy/info] Read '41a21b60-c6b8-4bb5-8b69-c42b3330c96c' from file "B71example2.fast5" completed.
+2022-03-25 02:08:25.525223 [guppy/info] Read '028762f9-73b9-4322-bb6c-ddf296a71d5c' from file "B71example2.fast5" completed.
+2022-03-25 02:08:28.395506 [guppy/info] Read '4a7417d4-c1bf-4ed6-820e-57d74680f6d6' from file "B71example1.fast5" completed.
+2022-03-25 02:08:30.864185 [guppy/info] Read '04361a21-4324-471f-bc52-781e12c1902b' from file "B71example2.fast5" completed.
+2022-03-25 02:08:34.532032 [guppy/info] Read '4af0722b-ef9b-4ec5-aba8-f16898c0a479' from file "B71example2.fast5" completed.
+2022-03-25 02:08:37.179489 [guppy/info] Read '4ce45ca9-83f6-4a81-8e61-4fbdded00731' from file "B71example1.fast5" completed.
+2022-03-25 02:08:52.402735 [guppy/info] Read '07bce571-0b74-4b64-9c66-52c759e3f327' from file "B71example2.fast5" completed.
+2022-03-25 02:09:06.966179 [guppy/info] Read '07e644c0-7b98-4d0b-8055-e5fa6a18ed56' from file "B71example2.fast5" completed.
+2022-03-25 02:09:25.978184 [guppy/info] Read '57d3c56f-726c-4c5f-a02c-f083d682bcc5' from file "B71example2.fast5" completed.
+2022-03-25 02:09:27.980707 [guppy/info] Read '4deac4c9-e03f-4141-bd14-4328c632d62b' from file "B71example1.fast5" completed.
+2022-03-25 02:09:51.396219 [guppy/info] Read '5ccef310-98bb-4aa2-9687-828293a2bab9' from file "B71example2.fast5" completed.
+2022-03-25 02:09:56.823201 [guppy/info] Read '506f8e0f-4269-43b4-8383-8797a95f8fcb' from file "B71example1.fast5" completed.
+2022-03-25 02:10:00.470218 [guppy/info] Read '23bbff32-6170-4845-b2e6-48531be20cc9' from file "B71example2.fast5" completed.
+2022-03-25 02:10:22.396223 [guppy/info] Read '66cb92a2-83bf-474f-b960-615d56a49e16' from file "B71example2.fast5" completed.
+2022-03-25 02:10:28.714209 [guppy/info] Read '2d1ed120-481c-4301-aaaa-01b1aec2ed00' from file "B71example2.fast5" completed.
+2022-03-25 02:10:56.975161 [guppy/info] Read '2e795125-ce6e-4f36-a599-0d88f4e10aff' from file "B71example2.fast5" completed.
+2022-03-25 02:11:04.209284 [guppy/info] Read '68ae5564-02d5-4fba-9250-8aedbaddcf9b' from file "B71example2.fast5" completed.
+2022-03-25 02:11:18.755012 [guppy/info] Read '6830731c-d263-4a5e-a1ad-ae07ef0ea440' from file "B71example2.fast5" completed.
+2022-03-25 02:11:31.124226 [guppy/info] Read '688ef985-46de-4625-8e3b-5d3ce42681bc' from file "B71example2.fast5" completed.
+2022-03-25 02:11:39.205206 [guppy/info] Read '7b4a3921-39db-4de5-8182-ed60d9997723' from file "B71example2.fast5" completed.
+2022-03-25 02:11:52.164174 [guppy/info] Read '4f5685d0-06f4-4e98-8e53-0bc6889945f7' from file "B71example1.fast5" completed.
+2022-03-25 02:12:02.239206 [guppy/info] Read '97e55130-94f7-4e84-80d5-21b0c0cb7a5f' from file "B71example2.fast5" completed.
+2022-03-25 02:12:25.972390 [guppy/info] Read '7d2e54a0-686c-4edd-8e3b-509482f42452' from file "B71example2.fast5" completed.
+2022-03-25 02:12:26.855233 [guppy/info] Read '9e0e8f5c-036d-462c-9f79-b68bc4f701d4' from file "B71example2.fast5" completed.
+2022-03-25 02:12:31.835489 [guppy/info] Read '529805ec-4cb5-4882-91c4-c350647a5088' from file "B71example1.fast5" completed.
+2022-03-25 02:12:58.233321 [guppy/info] Read '9e7a71ac-0bfd-4ce7-bfae-5e0c37d73a99' from file "B71example2.fast5" completed.
+2022-03-25 02:12:59.538410 [guppy/info] Read '5389958d-d26b-488b-ac88-9c99454aa443' from file "B71example1.fast5" completed.
+2022-03-25 02:13:00.835210 [guppy/info] Read '9faa7545-c71a-4601-abed-ba502efd3b6f' from file "B71example2.fast5" completed.
+2022-03-25 02:13:04.028209 [guppy/info] Read '7deeed5b-def0-4f8a-b756-9de30fb79a94' from file "B71example2.fast5" completed.
+2022-03-25 02:13:09.932183 [guppy/info] Read '7ed13a28-a1fd-4133-9518-3ca36e87794f' from file "B71example2.fast5" completed.
+2022-03-25 02:13:12.938245 [guppy/info] Read 'a4cb52a6-1784-4abd-829a-26b43477666d' from file "B71example2.fast5" completed.
+2022-03-25 02:13:30.262193 [guppy/info] Read '5930246a-a072-4492-a996-565af17f53c9' from file "B71example1.fast5" completed.
+2022-03-25 02:13:55.724180 [guppy/info] Read '8078a6a6-6796-47df-9041-ca39510e6c94' from file "B71example2.fast5" completed.
+2022-03-25 02:14:02.376648 [guppy/info] Read 'a5c89a61-a32c-4c1d-9000-a0a5394ae914' from file "B71example2.fast5" completed.
+2022-03-25 02:14:17.673178 [guppy/info] Read '5c399d16-96ee-435e-868c-db276ce26515' from file "B71example1.fast5" completed.
+2022-03-25 02:14:33.938545 [guppy/info] Read 'a74ff64e-208d-4608-beed-1a28fd24e80d' from file "B71example2.fast5" completed.
+2022-03-25 02:14:35.627262 [guppy/info] Read '810c0979-874f-46c8-be03-a89d8fe4db84' from file "B71example2.fast5" completed.
+2022-03-25 02:15:03.745186 [guppy/info] Read 'a7d0ab0e-2432-441a-8746-30b450967789' from file "B71example2.fast5" completed.
+2022-03-25 02:15:09.109488 [guppy/info] Read '6226062c-319b-4eee-94eb-2a9d323b406c' from file "B71example1.fast5" completed.
+2022-03-25 02:15:13.202196 [guppy/info] Read '65d6f04c-6c21-4eeb-9453-f4ffc06a9416' from file "B71example1.fast5" completed.
+2022-03-25 02:15:26.605183 [guppy/info] Read 'a8961b0e-501e-44e8-9e35-7a7f6296c491' from file "B71example2.fast5" completed.
+2022-03-25 02:15:29.422677 [guppy/info] Read '704b90f2-c8ef-4825-b3ae-ec1eb6e46536' from file "B71example1.fast5" completed.
+2022-03-25 02:15:34.248177 [guppy/info] Read '84e05d77-efd6-436d-9bc6-5bbb6d55236e' from file "B71example2.fast5" completed.
+2022-03-25 02:15:56.933204 [guppy/info] Read '8d0f64f1-e1dd-4248-bcfe-88038158bd4a' from file "B71example2.fast5" completed.
+2022-03-25 02:15:59.254244 [guppy/info] Read '7224c2e5-5724-47cd-85c8-5ed411f41824' from file "B71example1.fast5" completed.
+2022-03-25 02:16:10.897195 [guppy/info] Read 'a989760e-5780-4284-a098-faa429783583' from file "B71example2.fast5" completed.
+2022-03-25 02:16:24.598181 [guppy/info] Read 'eaf049d5-6f28-45e7-af9e-119031eb895f' from file "B71example2.fast5" completed.
+2022-03-25 02:16:30.847292 [guppy/info] Read 'aed31190-5bab-4cdc-b53e-0a22c1096eeb' from file "B71example2.fast5" completed.
+2022-03-25 02:16:42.982208 [guppy/info] Read '755138b2-6d64-4323-9bd2-eeaa21b18856' from file "B71example1.fast5" completed.
+2022-03-25 02:16:52.650496 [guppy/info] Read 'f4bb2998-6c9a-491d-afd3-933e25260079' from file "B71example2.fast5" completed.
+2022-03-25 02:17:11.513190 [guppy/info] Read 'aaeeda03-62ef-49d0-b279-dd8380e5cd75' from file "B71example2.fast5" completed.
+2022-03-25 02:17:21.120197 [guppy/info] Read '79968e00-fd2b-4cf7-afdc-eb9e04b67bc3' from file "B71example1.fast5" completed.
+2022-03-25 02:17:24.631187 [guppy/info] Read 'abc297b8-c733-4827-91a5-9ee60476a50c' from file "B71example2.fast5" completed.
+2022-03-25 02:17:29.090870 [guppy/info] Read 'f681f6a8-8c3f-4293-85c4-fdc88ac25ada' from file "B71example2.fast5" completed.
+2022-03-25 02:17:42.420841 [guppy/info] Read 'b876c73b-ad98-4e1a-94d0-832ab553487f' from file "B71example2.fast5" completed.
+2022-03-25 02:17:45.472776 [guppy/info] Read '864fd6cd-b522-4453-811c-4aa857dac1b7' from file "B71example1.fast5" completed.
+2022-03-25 02:17:51.841352 [guppy/info] Read 'bc9dad3b-26da-40f6-9fad-6a10d1375e40' from file "B71example2.fast5" completed.
+2022-03-25 02:17:55.303709 [guppy/info] Read '89a81018-50dc-4763-9253-438c8ded4e80' from file "B71example1.fast5" completed.
+2022-03-25 02:17:56.479228 [guppy/info] Read 'c06d0c43-75d2-49b1-8b62-b20e4a1b19f7' from file "B71example2.fast5" completed.
+2022-03-25 02:18:15.570173 [guppy/info] Read 'c14d55d9-c199-4468-a06d-0a6d855affea' from file "B71example2.fast5" completed.
+2022-03-25 02:18:33.900213 [guppy/info] Read 'c27b236a-5439-424d-941e-8b93be6dc073' from file "B71example2.fast5" completed.
+2022-03-25 02:18:42.446648 [guppy/info] Read '8dccdbe0-a9fa-4019-9299-8eaffaaed970' from file "B71example1.fast5" completed.
+2022-03-25 02:18:51.761396 [guppy/info] Read 'c3130edc-57f2-4bea-a832-67f2765dffb5' from file "B71example2.fast5" completed.
+2022-03-25 02:18:54.015560 [guppy/info] Read '916dc0ce-0b11-4a02-aabf-e5515baaa187' from file "B71example1.fast5" completed.
+2022-03-25 02:19:08.652214 [guppy/info] Read 'c4e37cb5-086a-4dd2-b6de-0eba44e7a890' from file "B71example2.fast5" completed.
+2022-03-25 02:19:33.590213 [guppy/info] Read '93250208-7de3-4bbe-893e-c6744b675c86' from file "B71example1.fast5" completed.
+2022-03-25 02:19:34.869340 [guppy/info] Read 'cf7f9a34-fe73-4f17-a3fa-de655d663881' from file "B71example2.fast5" completed.
+2022-03-25 02:19:58.945652 [guppy/info] Read 'd0364487-7a9b-477e-bf0e-15aefc734114' from file "B71example2.fast5" completed.
+2022-03-25 02:20:09.565193 [guppy/info] Read '96b86db1-ea57-4e66-9660-de57c3f0774a' from file "B71example1.fast5" completed.
+2022-03-25 02:20:33.074865 [guppy/info] Read '96df29e4-bad0-4657-8b98-3a2e71895dc6' from file "B71example1.fast5" completed.
+2022-03-25 02:20:34.960611 [guppy/info] Read '96e44b56-7f5d-4d9c-9b5e-83bf4e54ebf2' from file "B71example1.fast5" completed.
+2022-03-25 02:20:40.059614 [guppy/info] Read '9ab32b55-fdee-46f4-b530-fe944a7e8e92' from file "B71example1.fast5" completed.
+2022-03-25 02:21:18.269999 [guppy/info] Read 'a06dcd9f-7def-4878-8b83-d630d9c773b2' from file "B71example1.fast5" completed.
+2022-03-25 02:21:28.950315 [guppy/info] Read 'a92d0882-bc1c-4f2e-aab5-6caa6bab9678' from file "B71example1.fast5" completed.
+2022-03-25 02:22:08.486551 [guppy/info] Read 'aab5da3a-70f2-4e19-97ad-abd709f99cde' from file "B71example1.fast5" completed.
+2022-03-25 02:22:48.262409 [guppy/info] Read 'b3d317a5-10a5-4990-81fa-12f2c48b729e' from file "B71example1.fast5" completed.
+2022-03-25 02:23:04.070353 [guppy/info] Read 'b57634b2-058e-4fe6-856b-e7204d014080' from file "B71example1.fast5" completed.
+2022-03-25 02:23:09.211383 [guppy/info] Read 'b59d1b5f-c793-4b15-8d6f-d9cfb80b7e86' from file "B71example1.fast5" completed.
+2022-03-25 02:23:17.154065 [guppy/info] Read 'b8690546-9337-45c4-8df0-68b0dc989916' from file "B71example1.fast5" completed.
+2022-03-25 02:23:47.591044 [guppy/info] Read 'bca3ab54-7ea8-45f9-ae55-796a37dc4f4d' from file "B71example1.fast5" completed.
+2022-03-25 02:24:08.888470 [guppy/info] Read 'bf2e9fed-3fda-47f2-a2ae-d2b0a8090e17' from file "B71example1.fast5" completed.
+2022-03-25 02:24:30.158329 [guppy/info] Read 'c266b5e4-f173-437f-a3cf-b243e66649d4' from file "B71example1.fast5" completed.
+2022-03-25 02:24:36.513285 [guppy/info] Read 'c3e8a947-3b76-4a4b-8b39-b9c9d01fdf06' from file "B71example1.fast5" completed.
+2022-03-25 02:24:45.679539 [guppy/info] Read 'c810d9ed-2683-475c-9eed-e778d5548c12' from file "B71example1.fast5" completed.
+2022-03-25 02:25:00.463539 [guppy/info] Read 'c8d70b81-2770-40c4-8e5a-24e49dcd786a' from file "B71example1.fast5" completed.
+2022-03-25 02:25:15.703108 [guppy/info] Read 'cb4311e8-67ee-46f0-bd8a-55413ea1686d' from file "B71example1.fast5" completed.
+2022-03-25 02:25:35.547175 [guppy/info] Read 'cb4a18a3-4360-499b-80a3-fe55f7f83a28' from file "B71example1.fast5" completed.
+2022-03-25 02:25:52.324617 [guppy/info] Read 'cc9af57c-619d-4549-9045-3522f04d185a' from file "B71example1.fast5" completed.
+2022-03-25 02:26:19.173024 [guppy/info] Read 'cd40808e-9554-415e-b151-9689d05974fd' from file "B71example1.fast5" completed.
+2022-03-25 02:26:21.414621 [guppy/info] Read 'cd6392d4-3d12-47eb-a024-c23b4bb19a67' from file "B71example1.fast5" completed.
+2022-03-25 02:26:30.294029 [guppy/info] Read 'cf9dd997-3dd0-4928-a3fa-a3c7b676df39' from file "B71example1.fast5" completed.
+2022-03-25 02:26:30.739262 [guppy/info] Read 'd21bf541-023e-48af-9db6-1c8364b544f2' from file "B71example1.fast5" completed.
+2022-03-25 02:27:00.930320 [guppy/info] Read 'd339976d-1dd4-4025-b696-bdfa316fc1d9' from file "B71example1.fast5" completed.
+2022-03-25 02:27:38.541944 [guppy/info] Read 'd3480cc7-f974-4df2-8721-b018ecf5d0c1' from file "B71example1.fast5" completed.
+2022-03-25 02:27:52.205773 [guppy/info] Read 'd705733f-39ca-4efe-89b6-c554c29429c8' from file "B71example1.fast5" completed.
+2022-03-25 02:28:05.519177 [guppy/info] Read 'db4f9cf4-9e7c-4b8f-a362-795e94fced45' from file "B71example1.fast5" completed.
+2022-03-25 02:28:21.849158 [guppy/info] Read 'dd75f57d-dee7-4d45-af29-a5b1d5af8fcf' from file "B71example1.fast5" completed.
+2022-03-25 02:28:47.340020 [guppy/info] Read 'e711fc17-cc4a-4375-a97c-475b45277339' from file "B71example1.fast5" completed.
+2022-03-25 02:28:59.480745 [guppy/info] Read 'ea04ee4e-9283-4d6b-9500-580518017b14' from file "B71example1.fast5" completed.
+2022-03-25 02:29:11.576453 [guppy/info] Read 'f0d722d5-a8db-42e3-8b26-dde3ff56702f' from file "B71example1.fast5" completed.
+2022-03-25 02:29:32.588690 [guppy/info] Read '0a1c1324-9204-40f5-87f5-0449d762290b' from file "B71example2.fast5" completed.
+2022-03-25 02:29:50.273365 [guppy/info] Read '0bd4826f-92af-4e9d-bdb9-b627a7e2ccab' from file "B71example2.fast5" completed.
+2022-03-25 02:30:09.264327 [guppy/info] Read '12abf9ef-080c-4af7-a935-e8e847781fc1' from file "B71example2.fast5" completed.
+2022-03-25 02:30:36.606285 [guppy/info] Read '14ea6b00-1c1c-4082-8bbf-65a435036a5d' from file "B71example2.fast5" completed.
+2022-03-25 02:30:52.947724 [guppy/info] Read '219ad381-e667-437b-90ac-d69893a18e10' from file "B71example2.fast5" completed.
+2022-03-25 02:30:59.378911 [guppy/info] Read '21fc48de-928a-4c00-945f-0bc699d493a6' from file "B71example2.fast5" completed.
+2022-03-25 02:31:07.111902 [guppy/info] Read '228bfed7-2083-4876-8820-cd5c58fa9015' from file "B71example2.fast5" completed.
+2022-03-25 02:31:37.990383 [guppy/info] Read '34b6b66b-a733-45ca-a72c-a40ea5ad7970' from file "B71example2.fast5" completed.
+2022-03-25 02:31:52.639405 [guppy/info] Read 'afc252a0-5a6c-48b9-9e2d-082ba4d5794b' from file "B71example2.fast5" completed.
+2022-03-25 02:32:58.289895 [guppy/info] Read 'd0a0d7fc-8b4a-4bcf-8521-bdc4a71a3599' from file "B71example2.fast5" completed.
+2022-03-25 02:33:41.508748 [guppy/info] Read 'd0c241c9-0415-4180-8832-ac2143bf5757' from file "B71example2.fast5" completed.
+2022-03-25 02:34:14.891342 [guppy/info] Read 'd4ca7972-913b-4445-af12-e71f916829d3' from file "B71example2.fast5" completed.
+2022-03-25 02:34:46.316761 [guppy/info] Read 'd8cbf017-ee40-43ea-8e97-3ec96f8bcb92' from file "B71example2.fast5" completed.
+2022-03-25 02:35:13.022279 [guppy/info] Read 'd8d86321-c65e-4d54-af5e-ec1cc1eb09c2' from file "B71example2.fast5" completed.
+2022-03-25 02:35:32.270790 [guppy/info] Read 'd946ddd6-31e9-4378-8044-47ed00b6214c' from file "B71example2.fast5" completed.
+2022-03-25 02:35:45.874292 [guppy/info] Read 'd9f8db9e-8267-4013-a73d-931f5ad3fb99' from file "B71example2.fast5" completed.
+2022-03-25 02:35:53.927898 [guppy/info] Read 'da5a4323-e611-4f12-a181-e7716bd1cfa8' from file "B71example2.fast5" completed.
+2022-03-25 02:36:11.143269 [guppy/info] Read 'daf33c06-bb1b-4f8d-b09c-aa0e8199cc22' from file "B71example2.fast5" completed.
+2022-03-25 02:36:56.770233 [guppy/info] Read 'dd429f54-6930-4a72-ad52-d8c58811d72f' from file "B71example2.fast5" completed.
+2022-03-25 02:37:03.800042 [guppy/info] Read 'df893b96-828a-4e5c-9a7d-3d9a6e29ca77' from file "B71example2.fast5" completed.
+2022-03-25 02:37:35.999588 [guppy/info] Read 'e13b8d70-58de-423d-a45a-2292dd204ddb' from file "B71example2.fast5" completed.
+2022-03-25 02:37:53.113778 [guppy/info] Read 'e1f446d9-5bbb-4610-b47b-04a14e82abbb' from file "B71example2.fast5" completed.
+2022-03-25 02:38:08.401992 [guppy/info] Read 'eae4faae-0bd2-4ed5-aba6-423f3ac0a199' from file "B71example2.fast5" completed.
+2022-03-25 02:38:40.618845 [guppy/info] Read 'eca075a1-3dc7-4372-bea9-eea62c115b40' from file "B71example2.fast5" completed.
+2022-03-25 02:39:04.081366 [guppy/info] Read 'f3d79dad-3083-4693-84a8-49a74231c46e' from file "B71example2.fast5" completed.
+2022-03-25 02:40:06.443416 [guppy/info] Read 'fcd3a097-2dc5-4a92-9d42-2936e21f7ebb' from file "B71example2.fast5" completed.
+2022-03-25 02:40:26.880724 [guppy/info] Read 'fd6c0ee2-ed35-4b85-9711-a05ab7609a00' from file "B71example2.fast5" completed.
+2022-03-25 02:40:41.125855 [guppy/info] Read 'fea88fa6-c0e6-400e-a6eb-22ab4ba6c712' from file "B71example2.fast5" completed.
+2022-03-25 02:41:00.798418 [guppy/info] Read 'ff541fd8-b549-41a9-9877-03b05e2fd5b4' from file "B71example2.fast5" completed.
+2022-03-25 02:41:00.896588 [guppy/info] Completed batch 0
+2022-03-25 02:41:00.896963 [guppy/message] Caller time: 4575353 ms, Samples called: 118595781, samples/s: 25920.6
+2022-03-25 02:41:00.897221 [guppy/message] Finishing up any open output files.
+2022-03-25 02:41:10.601270 [guppy/message] Basecalling completed successfully.

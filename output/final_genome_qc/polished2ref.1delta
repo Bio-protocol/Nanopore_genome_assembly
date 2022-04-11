@@ -1,0 +1,15 @@
+/bulk/guifanglin/1-projects/6-nano-asm/bio-protocol_wheatblast_localtest/input/ref.fasta /bulk/guifanglin/1-projects/6-nano-asm/bio-protocol_wheatblast_localtest/output/demo.v0.1.np.pilon.fasta
+NUCMER
+>ref tig00000001 50000 124197
+1 50000 41062 91067 10 10 0
+-532
+-1
+-1
+-22596
+-1
+-1
+2816
+1
+-20455
+-1
+0
