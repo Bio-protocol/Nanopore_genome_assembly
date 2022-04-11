@@ -1,0 +1,180 @@
+#!/bin/bash
+# by Sanzhen Liu
+# 3/2020
+
+version=0.01;
+
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+usage() {
+	echo -e "${RED}Prerequirement${NC}: Java, samtools, nanopolish"
+	echo -e "${RED}Usage${NC}: $0 -f <fasta> -r <reads> -b <bam> -n <np_path> -s <script> [other options]" >&2
+	echo "       -f: unpolished fasta file" >&2
+	echo "       -r: fastq reads" >&2
+	echo "       -b: bam" >&2
+	echo "       -n: nanopolish path" >&2
+	echo "       -s: scripts" >&2
+	echo "       -p: prefix" >&2
+	echo "       -m: maximal length" >&2
+	echo "       -c: number of cpus" >&2
+	echo "       -g: mem in Gb" >&2
+	echo "       -y; ploidy" >&2
+	echo "       -t: run time per job" >&2
+	echo "       -l: module to load; repeat to input multiple modules" >&2
+	echo "       -v: version" >&2
+	echo "       -h: help information" >&2
+}
+
+while getopts ":f:r:b:n:s:p:m:c:g:t:y:lvh" opt; do
+case $opt in
+	f) fasta=$OPTARG;;
+	r) reads=$OPTARG;;
+	b) bam=$OPTARG;;
+	n) np=$OPTARG;;
+	s) scripts=$OPTARG;;
+	p) prefix=$OPTARG;;
+	m) maxlen=$OPTARG;;
+	c) cpu=$OPTARG;;
+	g) mempercpu=$OPTARG;;
+	y) ploidy=$OPTARG;;
+	t) runtime=$OPTARG;;
+	l) modules+=($OPTARG);;
+	v) echo $version; exit;;
+	h) usage; exit;;
+\?) echo "Invalid options: -$OPTARG." >&2; exit;;
+:) echo "Option -$OPTARG requires an argument" >&2; exit;;
+esac
+done
+
+### check required parameters
+if [ -z $fasta ] || [ -z $reads ] || [ -z $bam ] || [ -z $np ] || [ -z $scripts ]; then
+	echo -e "${RED}ERROR${NC}: Required parameters: -f; -r; -b; -n; -s." >&2
+	usage;
+	exit;
+fi
+
+if [ -z $prefix ]; then
+	export prefix=`echo $fasta | sed 's/.*\///g' | sed 's/[.fasta$|.fas$|.fa$]//g'`
+	#if [ ! -d $prefix ]; then
+	#	mkdir $prefix
+	#fi
+fi
+
+if [ -z $maxlen ]; then
+	maxlen=200000
+fi
+
+if [ -z $cpu ]; then
+	cpu=8
+fi
+
+export cpu
+
+if [ -z $ploidy ]; then
+	ploidy=1
+fi
+
+export ploidy
+
+if [ -z $mempercpu ]; then
+	mempercpu=5G
+fi
+
+if [ -z $runtime ]; then
+	runtime=0-23:00:00
+fi
+
+# modules:
+#module load Java/1.8.0_192
+#module load SAMtools/1.9-foss-2018b
+
+for module in "${modules[@]}"; do
+	module load $module
+	echo $module;
+done
+
+#cd $prefix
+export wd=`pwd`/$prefix
+#########################################
+# input information: subject to change
+#########################################
+#if [ ! -f $fasta.fai ]; then
+#	samtools faidx $fasta
+#fi
+###
+
+#if [ ! -d $wd/unpolished ]; then
+#	mkdir $wd/unpolished
+#fi
+
+export seq=$wd/unpolished/$prefix.fasta
+#cp $fasta $seq
+#samtools faidx $seq
+
+lenBuffer=10
+export reads
+export bam
+export np
+export scripts
+
+
+# create directories
+#if [ ! -d $wd/log ]; then
+#	mkdir $wd/log
+#fi
+
+#if [ ! -d $wd/polished ]; then
+#	mkdir $wd/polished
+#fi
+
+#if [ ! -d $wd/vcf ]; then
+#	mkdir $wd/vcf
+#fi
+
+seqLenOut=$wd/"2-"$prefix".seqlen"
+#perl $scripts/fastaSize.pl $fasta > $seqLenOut
+#seqName=`cut -f 1 $seqLenOut`
+#seqLen=`cut -f 2 $seqLenOut`
+#echo "sequence length: "$seqLen
+export partitionOut=$wd/"1-"$prefix".partition.txt"
+
+#if [ $seqLen -le $maxlen ]; then
+#	targetregion=$seqName:1-$seqLen
+#	echo $targetregion
+#	# step 1a: direct np
+#	jidinfo=$(sbatch \
+#		--mem-per-cpu=$mempercpu \
+#		--cpus-per-task=$cpu \
+#		--time=$runtime \
+#		-D $wd \
+#		-J $prefix \
+#		-o $wd/log/$prefix"_"$a"_np.log" \
+#		$scripts/nanopolish.consensus.sh $targetregion)
+#else
+	# step 1b: partition
+#	perl $scripts/fasPartition.pl --fas $seq --max $maxlen --buffer $lenBuffer > $partitionOut
+#	npartitions=`wc -l $partitionOut | sed 's/ .*$//g'`
+#	echo $partitionOut
+#	jidinfo=$(sbatch \
+#		--array=1-$npartitions \
+#		--mem-per-cpu=$mempercpu \
+#		--cpus-per-task=$cpu \
+#		--time=$runtime \
+#		-D $wd \
+#		-J $prefix \
+#		-o $wd/log/$prefix"_"%a"_np.log" \
+#		$scripts/nanopolish.consensus.array.sh $partitionOut)
+#fi
+
+#jid=$(echo $jidinfo | sed 's/.* //g')
+
+# step 2: merge vcf and generate fasta
+	sbatch \
+	--mem-per-cpu=16g \
+	--cpus-per-task=1 \
+	--time=$runtime \
+	-D $wd \
+	-J $prefix \
+	-o $wd/log/$prefix"_vcf2fas.log" \
+	$scripts/vcf2fas.v2.sh
+

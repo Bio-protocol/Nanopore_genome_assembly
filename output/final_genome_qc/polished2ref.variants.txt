@@ -1,0 +1,15 @@
+/bulk/guifanglin/1-projects/6-nano-asm/bio-protocol_wheatblast_localtest/input/ref.fasta /bulk/guifanglin/1-projects/6-nano-asm/bio-protocol_wheatblast_localtest/output/demo.v0.1.np.pilon.fasta
+NUCMER
+
+    [P1]  [SUB]  [P2]      |   [BUFF]   [DIST]  |  [R]  [Q]  | [FRM]  [TAGS]
+================================================================================
+     531   . T   41593     |        0      531  |    0    0  |  1  1  ref	tig00000001
+     531   . T   41594     |        0      531  |    0    0  |  1  1  ref	tig00000001
+     531   . T   41595     |        0      531  |    0    0  |  1  1  ref	tig00000001
+   23126   . A   64191     |        0    23126  |    0    0  |  1  1  ref	tig00000001
+   23126   . A   64192     |        0    23126  |    0    0  |  1  1  ref	tig00000001
+   23126   . A   64193     |        0    23126  |    0    0  |  1  1  ref	tig00000001
+   25942   T .   67008     |        1    24059  |    0    0  |  1  1  ref	tig00000001
+   25943   T .   67008     |        1    24058  |    0    0  |  1  1  ref	tig00000001
+   46397   . T   87463     |        0     3604  |    0    0  |  1  1  ref	tig00000001
+   46397   . T   87464     |        0     3604  |    0    0  |  1  1  ref	tig00000001

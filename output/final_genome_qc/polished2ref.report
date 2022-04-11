@@ -1,0 +1,87 @@
+/bulk/guifanglin/1-projects/6-nano-asm/bio-protocol_wheatblast_localtest/input/ref.fasta /bulk/guifanglin/1-projects/6-nano-asm/bio-protocol_wheatblast_localtest/output/demo.v0.1.np.pilon.fasta
+NUCMER
+
+                               [REF]                [QRY]
+[Sequences]
+TotalSeqs                          1                    1
+AlignedSeqs              1(100.0000%)          1(100.0000%)
+UnalignedSeqs             0(0.0000%)           0(0.0000%)
+
+[Bases]
+TotalBases                     50000               124197
+AlignedBases         50000(100.0000%)      50006(40.2635%)
+UnalignedBases            0(0.0000%)      74191(59.7365%)
+
+[Alignments]
+1-to-1                             1                    1
+TotalLength                    50000                50006
+AvgLength                 50000.0000           50006.0000
+AvgIdentity                  99.9800              99.9800
+
+M-to-M                             1                    1
+TotalLength                    50000                50006
+AvgLength                 50000.0000           50006.0000
+AvgIdentity                  99.9800              99.9800
+
+[Feature Estimates]
+Breakpoints                        0                    2
+Relocations                        0                    0
+Translocations                     0                    0
+Inversions                         0                    0
+
+Insertions                         0                    2
+InsertionSum                       0                74191
+InsertionAvg                  0.0000           37095.5000
+
+TandemIns                          0                    0
+TandemInsSum                       0                    0
+TandemInsAvg                  0.0000               0.0000
+
+[SNPs]
+TotalSNPs                          0                    0
+CG                        0(0.0000%)           0(0.0000%)
+CA                        0(0.0000%)           0(0.0000%)
+CT                        0(0.0000%)           0(0.0000%)
+TC                        0(0.0000%)           0(0.0000%)
+TA                        0(0.0000%)           0(0.0000%)
+TG                        0(0.0000%)           0(0.0000%)
+AC                        0(0.0000%)           0(0.0000%)
+AT                        0(0.0000%)           0(0.0000%)
+AG                        0(0.0000%)           0(0.0000%)
+GC                        0(0.0000%)           0(0.0000%)
+GA                        0(0.0000%)           0(0.0000%)
+GT                        0(0.0000%)           0(0.0000%)
+
+TotalGSNPs                         0                    0
+GA                        0(0.0000%)           0(0.0000%)
+GT                        0(0.0000%)           0(0.0000%)
+GC                        0(0.0000%)           0(0.0000%)
+AT                        0(0.0000%)           0(0.0000%)
+AG                        0(0.0000%)           0(0.0000%)
+AC                        0(0.0000%)           0(0.0000%)
+TC                        0(0.0000%)           0(0.0000%)
+TA                        0(0.0000%)           0(0.0000%)
+TG                        0(0.0000%)           0(0.0000%)
+CT                        0(0.0000%)           0(0.0000%)
+CA                        0(0.0000%)           0(0.0000%)
+CG                        0(0.0000%)           0(0.0000%)
+
+TotalIndels                       10                   10
+C.                        0(0.0000%)           0(0.0000%)
+T.                       2(20.0000%)          5(50.0000%)
+A.                        0(0.0000%)          3(30.0000%)
+G.                        0(0.0000%)           0(0.0000%)
+.C                        0(0.0000%)           0(0.0000%)
+.A                       3(30.0000%)           0(0.0000%)
+.G                        0(0.0000%)           0(0.0000%)
+.T                       5(50.0000%)          2(20.0000%)
+
+TotalGIndels                       0                    0
+G.                        0(0.0000%)           0(0.0000%)
+A.                        0(0.0000%)           0(0.0000%)
+T.                        0(0.0000%)           0(0.0000%)
+C.                        0(0.0000%)           0(0.0000%)
+.C                        0(0.0000%)           0(0.0000%)
+.G                        0(0.0000%)           0(0.0000%)
+.A                        0(0.0000%)           0(0.0000%)
+.T                        0(0.0000%)           0(0.0000%)
