@@ -183,7 +183,7 @@ Output 2:
 ```
   [S1]     [E1]  |     [S2]     [E2]  |  [LEN 1]  [LEN 2]  |  [% IDY]  | [TAGS]
 =====================================================================================
-       1    50000  |    41062    91067  |    50000    50006  |    99.98  | ref  tig00000001
+     1    50000  |    41062    91067  |    50000    50006  |    99.98  | ref  tig00000001
 ```
 The result indicated the 50 kb reference sequence can be aligned to tig00000001:41,062-91,067. The identity between the aligned reference and new assembly sequences is 99.98%. 
 
