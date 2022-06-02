@@ -18,9 +18,9 @@ if [ -f $partitionOut ]; then
 		# merge
 		mergevcf=4-merged.vcf
 		ls $wd/vcf/*vcf -1 > $vcflist
-		/homes/guifanglin/bin/GATK/gatk-4.2.0.0/gatk CreateSequenceDictionary -R $seq
+		gatk CreateSequenceDictionary -R $seq
 		seqdict=`echo $seq | sed 's/fasta$/dict/g'`
-		/homes/guifanglin/bin/GATK/gatk-4.2.0.0/gatk MergeVcfs -O $mergevcf -I $vcflist -D $seqdict
+		gatk MergeVcfs -O $mergevcf -I $vcflist -D $seqdict
 
 		# generate fasta
 		$np/nanopolish vcf2fasta --skip-checks -g $seq $mergevcf > $wd/polished/polished.$prefix
