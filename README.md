@@ -49,7 +49,7 @@ conda create -n npasm
 conda activate npasm
 conda install -c bioconda -c conda-forge -c defaults canu=2.2 nanopolish=0.13.2
 conda install -c bioconda samtools seqtk minimap2 bwa mummer4
-conda install -c bioconda -c gatk
+conda install -c bioconda gatk
 conda deactivate
 ```
 
