@@ -23,8 +23,8 @@ This is an example workflow to assemble a chromosomal segment of a wheat blast f
 
 Download the bio-protocol repository from GitHub.
 ```
-git clone https://github.com/Bio-protocol/xxx
-cd xxx
+git clone https://github.com/Bio-protocol/Nanopore_genome_assembly
+cd Nanopore_genome_assembly
 ```
 
 Download Guppy from Oxford Nanopore Community webpage.
