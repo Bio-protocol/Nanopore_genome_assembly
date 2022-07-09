@@ -1,4 +1,4 @@
-[![License: MIT](https://img.shields.io/badge/license-MIT-green)](https://github.com/github/choosealicense.com/blob/gh-pages/LICENSE.md).
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](https://github.com/github/choosealicense.com/blob/gh-pages/LICENSE.md)
 
 # Genome assembly with Nanopore reads
 
