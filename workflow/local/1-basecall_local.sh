@@ -51,7 +51,6 @@ lib/ont-guppy-cpu/bin/guppy_basecaller	-i $infolder \
 					--num_callers $nbc
 #  --resume   Resume a previous basecall run using the same output folder.						
 # if GPU available, please download the gpu version guppy from Oxford Nanopore website and modify the code.						
-# Merge the multiple fastq files
-cat $infastq >  $mergefastq
+
 
 popd
