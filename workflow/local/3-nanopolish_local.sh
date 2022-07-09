@@ -37,9 +37,11 @@ f5Dir=$mypath/input/ont_fast5/fast5
 fqsum_dir=$mypath/cache/1o-basecall/sequencing_summary.txt
 ref=$mypath/cache/2o-${out}.asmv0.1/${out}.v0.1.contigs.fasta
 outaln=2o-example
-
-
 ncpu=4
+
+prefix=np
+bam=$mypath/$outdir/$outaln.bam
+log=$mypath/$outdir/np.log
 
 ########################################################################
 
@@ -63,9 +65,6 @@ samtools index $outdir/$outaln.bam
 rm $outdir/$outaln.sam
 
 ##########################################################
-prefix=np
-bam=$mypath/$outdir/$outaln.bam
-log=$mypath/$outdir/np.log
 ##########################################################
 
 # nanopolish
