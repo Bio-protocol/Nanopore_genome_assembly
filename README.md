@@ -27,7 +27,8 @@ git clone https://github.com/Bio-protocol/Nanopore_genome_assembly
 cd Nanopore_genome_assembly
 ```
 
-Download Guppy from Oxford Nanopore Community webpage.
+Download Guppy from Oxford Nanopore Community webpage. Guppy basecaller is frequently upgrade, so Guppy version 6.0.6 is just an example version. Users can register on nanoporetech.com to access the latest version of Guppy software. 
+
 ```
 # Example
 pushd lib
