@@ -1,4 +1,4 @@
-[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
+[![License: MIT](https://img.shields.io/badge/liscense-MIT-green)](https://github.com/github/choosealicense.com/blob/gh-pages/LICENSE.md).
 
 # Genome assembly with Nanopore reads
 
