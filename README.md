@@ -88,8 +88,7 @@ The whole process of this example will take several hours to finish. (For testin
 
 To run the code step by step, use the flowing command. 
  ### Guppy basecalling
- The fast5 data was basecalled using the software Guppy released by the Oxford Nanopore company. The basecalling step will take serval hours to finish.
-```
+ The fast5 data was basecalled using the software Guppy released by the Oxford Nanopore company. The basecalling step will take serval hours to finish. You can skip this step for testing. The output fastq files has been stored in the "cache/1o-basecall". 
 cd workflow
 sh local/1-basecall_local.sh
 cd ..
